@@ -1,5 +1,5 @@
 :root {
-  --color-gray: #BEBEBE;
+  --color-gray: #cac0be;
   --color-light-gray: #F5F5F5;
   --color-dark-gray: #616365;
   --color-dark: #23262A;
@@ -8,12 +8,74 @@
   --max-content-width: 1683px;
 }
 
-.background-gray {
+.background-light-gray {
   background-color: var(--color-light-gray);
 }
 
+.background-gray {
+  background-color: var(--color-gray);
+}
+
+.height-560 {
+  height: 560px;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
 button {
+  border: none;
+  font-weight: 500;
+  position: relative;
+  border: none;
   transition: all 0.1s ease;
+}
+
+.button-fancy {
+  padding: 24px 51px;
+  color: white;
+}
+.button-fancy::before {
+  content: " ";
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  position: absolute;
+  display: block;
+  transition: all 0.5s ease;
+  transform: rotate(90deg);
+}
+.button-fancy::after {
+  content: " ";
+  right: 10px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  position: absolute;
+  display: block;
+  transition: all 0.5s ease;
+  transform: rotate(90deg);
+}
+.button-fancy:hover {
+  box-shadow: 0px 0px 5px #23262A;
+}
+.button-fancy:hover::before {
+  left: calc(100% - 30px);
+  transform: rotate(180deg);
+}
+.button-fancy:hover::after {
+  right: calc(100% - 30px);
+  transform: rotate(180deg);
+}
+.button-fancy:active {
+  scale: 105%;
+  box-shadow: 0px 0px 5px #23262A;
 }
 
 .button-icon {
@@ -37,50 +99,12 @@ button {
 
 .button-red {
   background-color: var(--color-red);
-  border: none;
-  padding: 24px 51px;
   color: white;
-  font-weight: 500;
-  position: relative;
-  transition: all 0.1s ease;
 }
-.button-red::before {
-  content: " ";
-  left: 10px;
-  top: 10px;
-  width: 20px;
-  height: 20px;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
-  position: absolute;
-  display: block;
-  transition: all 0.5s ease;
-  transform: rotate(90deg);
-}
-.button-red::after {
-  content: " ";
-  right: 10px;
-  bottom: 10px;
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid white;
-  border-top: 2px solid white;
-  position: absolute;
-  display: block;
-  transition: all 0.5s ease;
-  transform: rotate(90deg);
-}
-.button-red:hover::before {
-  left: calc(100% - 30px);
-  transform: rotate(180deg);
-}
-.button-red:hover::after {
-  right: calc(100% - 30px);
-  transform: rotate(180deg);
-}
-.button-red:active {
-  scale: 105%;
-  box-shadow: 0px 0px 5px #23262A;
+
+.button-black {
+  background-color: var(--color-dark);
+  color: white;
 }
 
 nav {
@@ -127,6 +151,20 @@ a.active:hover {
 
 .text-align-center {
   text-align: center;
+}
+
+.width-fit-content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.width-50p {
+  width: 50%;
+}
+
+.margin-49 {
+  margin: 49px;
 }
 
 .logo {

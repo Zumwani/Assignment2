@@ -1,23 +1,29 @@
 @import "general.css";
 
+.section {
+    margin-bottom: 64px;
+}
+
 .top-section {
 
     height: 946px;
     position: absolute;
     left: 0;
     right: 0;
-    
+
 }
 
-h1 {
-    font-size: 65px;
-    font-weight: bolder;
-    margin-bottom: 58px;
+.align-bottom {
+    position: absolute;
+    bottom: 0;
 }
 
-h5 {
-    font-weight: lighter;
-    margin-bottom: 42px;
+.margin-bottom-100 {
+    margin-bottom: 100px;
+}
+
+.margin-top-50p {
+    margin-top: 50%;
 }
 
 .top-section-content {
@@ -67,4 +73,46 @@ h5 {
         overflow-x: hidden;
     }
 
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: bolder;
+    margin-bottom: 58px;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+h5 {
+    font-weight: lighter;
+    margin-bottom: 42px;
+}
+
+h6 {
+    margin-top: 34px;
+    margin-bottom: 34px;
+    font-weight: normal;
+}
+
+.margin-bottom-34 {
+    margin-bottom: 34px;
+}
+
+.background-model5 {
+    background-image: url("../img/img-5.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.background-model6 {
+    background-image: url("../img/img-6.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.width-635px {
+    width: 635px;
 }
