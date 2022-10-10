@@ -1,0 +1,52 @@
+@import "general.css";
+
+img {
+    width: 100%;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.width-stretch {
+    width: 100%;
+}
+
+.comment-box {
+    width: 1110px;
+    height: 140px;
+    margin-bottom: 30px;
+}
+
+form {
+    position: relative;
+    left: calc(50% - (1110px / 2));
+    margin-top: 70px;
+    margin-bottom: 70px;
+    overflow-x: clip;
+    width: fit-content;
+
+    div {
+        gap: 30px;
+    }
+
+}
+
+input, textarea {
+    margin-top: 30px;
+    outline: none;
+    border: 2px solid #c6c6c6;
+    box-shadow: none;
+    padding: 20px;
+    transition: all 0.05s ease;
+
+    &:focus, &:active {
+        border: 2px solid var(--color-dark-gray);
+    }
+
+}
+
+.error {
+    border: 2px solid red !important;
+}

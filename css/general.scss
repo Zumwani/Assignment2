@@ -8,6 +8,92 @@
     --max-content-width: 1683px;
 }
 
+* {
+    font-family: Poppins;
+}
+
+.main-layout {
+    // min-height: 100vh;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+}
+
+nav {
+
+    position: relative;
+    user-select: none;
+    z-index: 1;
+    columns: 3;
+    height: 100px;
+    column-width: 237px;
+
+    >:nth-child(1), >:nth-child(3) {
+        width: 237px;
+    }
+
+    .fa {
+        font-weight: normal;
+    }
+
+    a:not(.logo), button {
+        margin-left: 20px;
+    }
+    
+    a {
+        font-weight: bold;
+    }
+
+}
+
+footer {
+
+    position: relative;
+    background-color: var(--color-light-gray);
+    height: 110px;
+
+    div {
+        position: absolute;
+        margin: auto;
+        margin-top: 24px;
+        gap: 10px;
+        width: 100%;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    a {
+        height: 22px;
+        margin: 9px;
+
+        &:hover {
+            scale: 110%;
+        }
+
+        &:active {
+            scale: 150%;
+        }
+
+    }
+
+    .fa-facebook:hover { color: blue; }
+    .fa-instagram:hover { color: purple; }
+    .fa-twitter:hover { color: deepskyblue; }
+    .fa-google:hover { color: red; }
+    .fa-linkedin:hover { color: blue; }
+
+}
+
+.logo {
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    display: block;
+    width: 103px;
+    height: 49px;
+    align-self: center;
+}
+
 .background-light-gray {
     background-color: var(--color-light-gray);
 }
@@ -30,13 +116,18 @@ button {
     font-weight: 500;
     position: relative;
     border: none;
+    padding: 24px 51px;
     transition: all 0.1s ease;
 
 }
 
+.pointer-events-none {
+    pointer-events: none;
+}
+
 .button-fancy {
 
-    padding: 24px 51px;
+    
     color: white;
 
     &::before {
@@ -98,6 +189,7 @@ button {
     width: 36px;
     height: 36px;
     border: transparent;
+    padding: 0;
     box-shadow: 0px 0px 12px 4px #e8e8e8;
     transition: all 0.1s ease;
 
@@ -122,35 +214,6 @@ button {
 .button-black {
     background-color: var(--color-dark);
     color: white;
-}
-
-nav {
-
-    position: absolute;
-    top: 27px;
-    width: 100%;
-    max-width: var(--max-content-width);
-    margin: 0 auto;
-    z-index: 1;   
-    user-select: none;
-    columns: 3;
-
-    >:nth-child(1), >:nth-child(3) {
-        width: 237px;
-    }
-
-    .fa {
-        font-weight: normal;
-    }
-
-    a:not(.logo), button {
-        margin-left: 20px;
-    }
-    
-    a {
-        font-weight: bold;
-    }
-
 }
 
 a {
@@ -188,24 +251,6 @@ a {
 
 .margin-49 {
     margin: 49px;
-}
-
-.logo {
-    background-image: url("../img/logo.svg");
-    background-repeat: no-repeat;
-    display: block;
-    width: 103px;
-    height: 49px;
-}
-
-body {
-    min-height: 100vh;
-    max-width: var(--max-content-width);
-    margin: 0 auto;
-}
-
-* {
-    font-family: Poppins;
 }
 
 .horizontal {
