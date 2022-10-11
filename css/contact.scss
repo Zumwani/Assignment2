@@ -13,15 +13,8 @@ h3 {
     width: 100%;
 }
 
-.comment-box {
-    width: 1110px;
-    height: 140px;
-    margin-bottom: 30px;
-}
-
 form {
-    position: relative;
-    left: calc(50% - (1110px / 2));
+    
     margin-top: 70px;
     margin-bottom: 70px;
     overflow-x: clip;
@@ -45,6 +38,13 @@ input, textarea {
         border: 2px solid var(--color-dark-gray);
     }
 
+}
+
+.comment-box {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 30px;
+    min-height: 68px;
 }
 
 .error {
