@@ -193,10 +193,31 @@ rating.rating-5-stars::after {
   background-color: var(--color-gray);
 }
 
+.background-dark-gray {
+  background-color: var(--color-gray);
+}
+
+.background-white {
+  background-color: var(--color-white);
+}
+
+.background-model3 {
+  background-image: url("../img/img-3.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.background-model4 {
+  background-image: url("../img/img-4.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
 .background-model5 {
   background-image: url("../img/img-5.svg");
   background-position: right;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .background-model6 {
@@ -205,8 +226,20 @@ rating.rating-5-stars::after {
   background-repeat: no-repeat;
 }
 
+.height-100p {
+  height: 100%;
+}
+
 .height-560 {
   height: 560px;
+}
+
+.height-400 {
+  height: 400px;
+}
+
+.width-490 {
+  width: 490px;
 }
 
 .width-50p {
@@ -217,8 +250,24 @@ rating.rating-5-stars::after {
   width: 635px;
 }
 
+.height-232 {
+  height: 232px;
+}
+
+.width-100p {
+  width: 100%;
+}
+
 .margin-49 {
   margin: 49px;
+}
+
+.margin-30 {
+  margin: 30px;
+}
+
+.margin-left-32 {
+  margin-left: 32px;
 }
 
 .margin-bottom-100 {
@@ -227,6 +276,36 @@ rating.rating-5-stars::after {
 
 .margin-top-50p {
   margin-top: 50%;
+}
+
+.padding-64 {
+  padding: 64px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.height-fit-content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.pos-right {
+  position: absolute;
+  right: 0;
+}
+
+.pos-vertical-center {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .flex-grow-2 {
@@ -266,6 +345,7 @@ a {
   text-decoration: none;
   color: var(--color-dark);
   transition: all 0.1s ease;
+  cursor: pointer;
 }
 a:hover {
   color: var(--color-red);
@@ -275,6 +355,9 @@ a.active {
 }
 a.active:hover {
   filter: brightness(80%);
+}
+a.underline {
+  text-decoration: underline;
 }
 
 button {
@@ -361,6 +444,17 @@ button {
   color: white;
 }
 
+.button-white {
+  background-color: var(--color-white);
+  color: black;
+}
+.button-white::before {
+  border-color: black;
+}
+.button-white::after {
+  border-color: black;
+}
+
 .button-product {
   width: 255px;
   text-align: center;
@@ -417,4 +511,67 @@ button {
   margin-top: 10px;
   margin-right: 10px;
   font-weight: normal;
+}
+
+.expand-on-hover:hover {
+  width: 100%;
+  height: 100%;
+}
+
+.expand-child-on-hover:hover > *:first-of-type {
+  width: 100%;
+  height: 100%;
+}
+
+.expand-child-on-hover > *:first-of-type {
+  transition: all 0.1s ease;
+}
+
+.gap-35 {
+  gap: 35px;
+}
+
+.button-specialty {
+  background-color: var(--light-gray);
+  width: 490px;
+  height: 232px;
+  background-color: var(--color-dark-gray);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.button-specialty > div {
+  width: 50%;
+}
+.button-specialty::before {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  background-color: var(--color-white);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  z-index: -1;
+  pointer-events: none;
+  transition: all 0.1s ease;
+}
+.button-specialty:hover::before {
+  opacity: 50%;
+  width: 100%;
+}
+.button-specialty:active {
+  scale: 105%;
+}
+.button-specialty * {
+  margin-left: 34px;
+  margin-right: 34px;
+  pointer-events: none;
 }/*# sourceMappingURL=general.css.map */
