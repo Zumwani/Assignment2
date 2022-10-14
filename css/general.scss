@@ -174,11 +174,15 @@ rating {
     color: var(--color-red);
     font-family: "Font Awesome 6 Pro";
     font-weight: normal;
+    margin-top: 4px;
+    margin-bottom: 4px;
 
     &:after {
         position: absolute;
         top: -8px;
         bottom: 0;
+        left: 0;
+        right: 0;
     }
 
     &.rating-1-stars::after { content: '★☆☆☆☆'; }
@@ -265,6 +269,11 @@ rating {
 .horizontal {
     display: flex;
     flex-direction: row;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
 }
 
 .align-bottom {
@@ -399,13 +408,70 @@ button {
 }
 
 .button-product {
+    width: 255px;
+    text-align: center;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
 
     img {
-        width: 255px;
+        width: 100%;
+        margin: 0;
         height: 210px;
         background-color: var(--color-light-gray);
         border: none;
         outline: none;
+    }
+
+    p:first-of-type {
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: normal;
+        color: #616365;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    .hover-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 210px;
+        background-color: #707070AA;
+        opacity: 0;
+        transition: all 0.1s ease;
+    }
+
+    &:hover {
+        .hover-box {
+            opacity: 1;
+        }
+    }
+
+    .button-fancy {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .icon-buttons {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .button-icon {
+        margin-top: 10px;
+        margin-right: 10px;
+        font-weight: normal;
     }
 
 }
