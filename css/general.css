@@ -2,13 +2,14 @@
 :root {
   --color-gray: #cac0be;
   --color-light-gray: #F5F5F5;
-  --color-dark-gray: #616365;
+  --color-dark-gray: #7e7f80;
   --color-shadow: rgba(34, 37, 41, 0.06);
   --color-dark: #23262A;
   --color-white: #FFFFFF;
   --color-red: #FF7373;
   --max-content-width: 1683px;
   --max-content-width2: 1110px;
+  --max-content-width3: 1395px;
 }
 
 * {
@@ -25,6 +26,18 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-layout-left-aligned {
+  max-width: var(--max-content-width3);
+  width: 100%;
+  margin-right: auto;
+}
+
+.main-layout-right-aligned {
+  max-width: var(--max-content-width3);
+  width: 100%;
+  margin-left: auto;
 }
 
 nav {
@@ -85,6 +98,7 @@ footer {
   position: relative;
   background-color: var(--color-light-gray);
   height: 110px;
+  margin-top: 110px;
 }
 footer div {
   position: absolute;
@@ -151,6 +165,10 @@ footer .fa-linkedin:hover {
   padding-left: 0.5px;
 }
 
+section {
+  margin: 65px;
+}
+
 rating {
   display: block;
   position: relative;
@@ -185,6 +203,14 @@ rating.rating-5-stars::after {
   content: "★★★★★";
 }
 
+.color-white {
+  color: white;
+}
+
+.color-gray {
+  color: #616365;
+}
+
 .background-light-gray {
   background-color: var(--color-light-gray);
 }
@@ -194,11 +220,15 @@ rating.rating-5-stars::after {
 }
 
 .background-dark-gray {
-  background-color: var(--color-gray);
+  background-color: var(--color-dark-gray);
 }
 
 .background-white {
   background-color: var(--color-white);
+}
+
+.background-dark {
+  background-color: var(--color-dark);
 }
 
 .background-model3 {
@@ -226,8 +256,30 @@ rating.rating-5-stars::after {
   background-repeat: no-repeat;
 }
 
+.background-customer-support {
+  background-image: url("../img/customer-support.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-credit-card {
+  background-image: url("../img/credit-card.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-delivery-truck {
+  background-image: url("../img/delivery-truck.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .height-100p {
   height: 100%;
+}
+
+.height-670 {
+  height: 670px;
 }
 
 .height-560 {
@@ -258,6 +310,38 @@ rating.rating-5-stars::after {
   width: 100%;
 }
 
+.width-60 {
+  width: 60px !important;
+}
+
+.height-60 {
+  height: 60px !important;
+}
+
+.width-255 {
+  width: 255px;
+}
+
+.padding-0 {
+  padding: 0px !important;
+}
+
+.padding-8 {
+  padding: -8px !important;
+}
+
+.padding-50 {
+  padding: 50px;
+}
+
+.padding-64 {
+  padding: 64px;
+}
+
+.margin-0 {
+  margin: 0px;
+}
+
 .margin-49 {
   margin: 49px;
 }
@@ -266,20 +350,37 @@ rating.rating-5-stars::after {
   margin: 30px;
 }
 
-.margin-left-32 {
-  margin-left: 32px;
-}
-
-.margin-bottom-100 {
-  margin-bottom: 100px;
+.margin-vertical-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .margin-top-50p {
   margin-top: 50%;
 }
 
-.padding-64 {
-  padding: 64px;
+.margin-top-90 {
+  margin-top: 90px;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.margin-bottom-26 {
+  margin-bottom: 26px;
+}
+
+.margin-bottom-100 {
+  margin-bottom: 100px;
+}
+
+.margin-left-0 {
+  margin-left: 0px;
+}
+
+.margin-left-32 {
+  margin-left: 32px;
 }
 
 .bold {
@@ -287,9 +388,9 @@ rating.rating-5-stars::after {
 }
 
 .height-fit-content {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
 }
 
 .align-center {
@@ -302,10 +403,42 @@ rating.rating-5-stars::after {
 }
 
 .pos-vertical-center {
+  position: absolute;
   top: 0;
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.pos-horizontal-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pos-vertical-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.pos-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .flex-grow-2 {
@@ -461,6 +594,12 @@ button {
   position: relative;
   padding: 0;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.1s ease;
+  font-size: 16px;
 }
 .button-product img {
   width: 100%;
@@ -492,6 +631,9 @@ button {
 .button-product:hover .hover-box {
   opacity: 1;
 }
+.button-product:active {
+  scale: 105%;
+}
 .button-product .button-fancy {
   position: absolute;
   left: 0;
@@ -513,22 +655,31 @@ button {
   font-weight: normal;
 }
 
-.expand-on-hover:hover {
-  width: 100%;
-  height: 100%;
+.button-product.small {
+  width: 351px;
+  text-align: left;
 }
-
-.expand-child-on-hover:hover > *:first-of-type {
-  width: 100%;
-  height: 100%;
+.button-product.small img {
+  width: 160px;
+  height: 132px;
+  padding: 0;
 }
-
-.expand-child-on-hover > *:first-of-type {
+.button-product.small .hover-box {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  height: 100%;
+  background-color: rgba(112, 112, 112, 0.6666666667);
   transition: all 0.1s ease;
 }
 
 .gap-35 {
   gap: 35px;
+}
+
+.margin-35 {
+  margin: 35px;
 }
 
 .button-specialty {
