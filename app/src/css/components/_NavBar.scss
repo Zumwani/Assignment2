@@ -1,0 +1,42 @@
+nav {
+    
+    position: relative;
+    user-select: none;
+    z-index: 1;
+    columns: 3;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+    .fa {
+        font-weight: normal;
+    }
+    
+    a:not(.logo), button {
+        margin-left: 20px;
+    }
+    
+    a {
+        font-weight: bold;
+    }
+
+    div {
+        width: 100%;
+
+        &:last-child { text-align: end; }
+
+    }
+    
+}
+
+.logo {
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    min-width: 103px;
+    height: 49px;
+    align-self: center;
+}

@@ -1,37 +1,30 @@
 import React from 'react'
-
-const url = window.location.pathname.split("/").pop().replace(".html", "");
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <nav className="main-layout">
       
       <div>
-        <a href="index.html" title="Fixxo" className="logo"></a>
+        <NavLink to="/" title="Fixxo" className="logo"/>
       </div>
       
       <div className="text-align-center">
-          <a href="index.html" className={"main-link " + GetActive("index")}>Home</a>
-          <a href="" className={"main-link " + GetActive("categories")}>Categories</a>
-          <a href="" className={"main-link " + GetActive("products")}>Products</a>
-          <a href="contact.html" className={"main-link " + GetActive("contact")}>Contact</a>
+          <NavLink to="/" end className="main-link">Home</NavLink>
+          <NavLink to="/categories" className="main-link">Categories</NavLink>
+          <NavLink to="/products" className="main-link">Products</NavLink>
+          <NavLink to="/contact" className="main-link">Contact</NavLink>
       </div>
       
       <div>
-          <button className="button-icon fa fa-search"></button>
-          <button className="button-icon fa fa-code-compare"></button>
-          <button className="button-icon fa fa-heart" badge="1"></button>
-          <button className="button-icon fa fa-shopping-bag" badge="3"></button>
+          <NavLink to="/search" className="button-icon fa fa-search"></NavLink>
+          <NavLink to="/compare" className="button-icon fa fa-code-compare"></NavLink>
+          <NavLink to="/wishlist" className="button-icon fa fa-heart" badge="1"></NavLink>
+          <NavLink to="/cart" className="button-icon fa fa-shopping-bag" badge="3"></NavLink>
       </div>
       
   </nav>
   )
-}
-
-function GetActive(page) {
-  console.log(url);
-if (page == url) return "active";
-return "";
 }
 
 export default NavBar

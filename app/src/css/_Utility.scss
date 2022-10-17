@@ -1,0 +1,74 @@
+//#region Color / Background
+
+.color-white {
+    color: white;
+}
+
+.color-gray {
+    color: #616365;
+}
+
+.background-light-gray {
+    background-color: var(--color-light-gray);
+}
+
+.background-gray {
+    background-color: var(--color-gray);
+}
+
+.background-dark-gray {
+    background-color: var(--color-dark-gray);
+}
+
+.background-white {
+    background-color: var(--color-white);
+}
+
+.background-dark {
+    background-color: var(--color-dark);
+}
+
+.background-model3 {
+    background-image: url("../img/img-3.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.background-model4 {
+    background-image: url("../img/img-4.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.background-model5 {
+    background-image: url("../img/img-5.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-model6 {
+    background-image: url("../img/img-6.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.background-customer-support {
+    background-image: url("../img/customer-support.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background-credit-card {
+    background-image: url("../img/credit-card.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background-delivery-truck {
+    background-image: url("../img/delivery-truck.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+//#endregion

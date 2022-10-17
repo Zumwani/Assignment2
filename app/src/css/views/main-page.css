@@ -32,7 +32,7 @@
   left: 0;
   bottom: 0;
   display: inline-block;
-  background-image: url("../img/img-1.svg");
+  background-image: url("../../img/img-1.svg");
   background-repeat: no-repeat;
   background-position: left;
   width: 100%;
@@ -46,7 +46,7 @@
   right: 0;
   bottom: 0;
   display: inline-block;
-  background-image: url("../img/img-2.svg");
+  background-image: url("../../img/img-2.svg");
   background-repeat: no-repeat;
   background-position: right;
   width: 100%;
