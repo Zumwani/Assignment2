@@ -13,7 +13,6 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path="/" element={<MainView/>}/>
-          <Route path="/index" element={<MainView/>}/>
           <Route path="/contact" element={<ContactView/>}/>
           <Route path="*" element={<NotFoundView/>}/>
         </Routes>

@@ -1,11 +1,11 @@
-@import "_Base.scss";
-@import "_Utility.scss";
+@use "Base";
+@use "_Utility.scss";
 
-@import "components/buttons/_Button-Fancy.scss";
-@import "components/buttons/_Button-Icon.scss";
-@import "components/buttons/_Button-Product.scss";
-@import "components/buttons/_Button-Specialty.scss";
+@use "components/buttons/Button-Fancy.scss";
+@use "components/buttons/Button-Icon.scss";
+@use "components/buttons/Button-Product.scss";
+@use "components/buttons/Button-Specialty.scss";
 
-@import "components/Badge.scss";
-@import "components/_NavBar.scss";
-@import "components/_Footer.scss";
+@use "components/Badge";
+@use "components/NavBar";
+@use "components/Footer.scss";
