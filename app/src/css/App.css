@@ -89,13 +89,13 @@ p {
 
 .background-model3 {
   background-image: url("../img/img-3.svg");
-  background-position: left;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .background-model4 {
   background-image: url("../img/img-4.svg");
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: right;
 }
 
@@ -130,52 +130,56 @@ p {
   background-repeat: no-repeat;
 }
 
-.height-100p {
-  height: 100%;
-}
-
-.height-670 {
-  height: 670px;
-}
-
-.height-560 {
-  height: 560px;
-}
-
-.height-400 {
-  height: 400px;
-}
-
-.width-490 {
-  width: 490px;
-}
-
-.width-50p {
-  width: 50%;
-}
-
-.width-635px {
-  width: 635px;
+.height-60 {
+  height: 60px !important;
 }
 
 .height-232 {
   height: 232px;
 }
 
-.width-100p {
-  width: 100%;
+.height-400 {
+  height: 400px;
+}
+
+.height-403 {
+  height: 403px;
+}
+
+.height-560 {
+  height: 560px;
+}
+
+.height-670 {
+  height: 670px;
+}
+
+.height-100p {
+  height: 100%;
 }
 
 .width-60 {
   width: 60px !important;
 }
 
-.height-60 {
-  height: 60px !important;
+.width-490 {
+  width: 490px;
+}
+
+.width-635 {
+  width: 635px;
 }
 
 .width-255 {
   width: 255px;
+}
+
+.width-50p {
+  width: 50%;
+}
+
+.width-100p {
+  width: 100%;
 }
 
 .max-width-342 {
@@ -250,6 +254,11 @@ p {
 .align-bottom {
   position: absolute;
   bottom: 0;
+}
+
+.align-right {
+  position: absolute;
+  right: 0;
 }
 
 .button-fancy {
