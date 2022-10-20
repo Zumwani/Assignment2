@@ -1,4 +1,6 @@
 import React from 'react'
+import '../css/sections/Section0.css'
+import ActionButton from '../components/ActionButton';
 
 const Showcase = () => {
   return (
@@ -10,7 +12,7 @@ const Showcase = () => {
             <div>
                 <h1 className="text-align-center">SALE UP<br/>To 50% Off</h1>
                 <h5>Online shopping free home delivery over $100</h5>
-                <button className="button-red button-fancy">SHOP NOW</button>
+                <ActionButton text="Shop now" color="red"/>
             </div>
         </div>
     </section>

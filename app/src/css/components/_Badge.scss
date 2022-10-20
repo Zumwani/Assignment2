@@ -5,11 +5,10 @@
     &::after {
         content: attr(badge);
         position: absolute;
-        top: -4px;
+        top: -26px;
         right: -4px;
         width: 16px;
-        height: 16px;    
-        padding-top: 3px;
+        height: 16px;
         padding-left: 0.5px;
         background-color: var(--color-red);
         border-radius: 100%;
@@ -18,7 +17,6 @@
         font-size: 11px;
         font-family: poppins;
         text-align: center;
-
     }
 
 }

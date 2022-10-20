@@ -1,0 +1,78 @@
+:root {
+  --color-gray: #cac0be;
+  --color-light-gray: #F5F5F5;
+  --color-dark-gray: #7e7f80;
+  --color-shadow: rgba(34, 37, 41, 0.06);
+  --color-dark: #23262A;
+  --color-white: #FFFFFF;
+  --color-red: #FF7373;
+  --max-content-width: 1683px;
+  --max-content-width2: 1110px;
+  --max-content-width3: 1395px;
+  --nav-height: 100px;
+  --footer-height: 110px;
+}
+
+button.action {
+  color: white;
+  text-transform: uppercase;
+}
+button.action::before {
+  content: " ";
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  position: absolute;
+  display: block;
+  transition: all 0.5s ease;
+  transform: rotate(90deg);
+}
+button.action::after {
+  content: " ";
+  right: 10px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  position: absolute;
+  display: block;
+  transition: all 0.5s ease;
+  transform: rotate(90deg);
+}
+button.action:hover {
+  box-shadow: 0px 0px 5px #23262A;
+}
+button.action:hover::before {
+  left: calc(100% - 30px);
+  transform: rotate(180deg);
+}
+button.action:hover::after {
+  right: calc(100% - 30px);
+  transform: rotate(180deg);
+}
+button.action:active {
+  scale: 105%;
+  box-shadow: 0px 0px 5px #23262A;
+}
+button.action.red {
+  background-color: var(--color-red);
+  color: white;
+}
+button.action.black {
+  background-color: var(--color-dark);
+  color: white;
+}
+button.action.white {
+  background-color: var(--color-white);
+  color: black;
+}
+button.action.white::before {
+  border-color: black;
+}
+button.action.white::after {
+  border-color: black;
+}/*# sourceMappingURL=ActionButton.css.map */

@@ -9,6 +9,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    padding-left: 22px;
+    padding-right: 22px;
     
     .fa {
         font-weight: normal;
@@ -29,6 +31,22 @@ nav {
 
     }
     
+    @media only screen and (max-width: 1683px)  {
+        padding: 0 !important;
+        margin: 22px !important;
+        max-width: 100vw !important;
+        text-align: end;
+    }
+    
+}
+
+.mobile-button {
+    display: none;
+
+    @media only screen and (max-width: 100px)  {
+        display: block;
+    }
+    
 }
 
 .logo {
@@ -36,7 +54,7 @@ nav {
     background-repeat: no-repeat;
     background-position: left;
     display: block;
-    min-width: 103px;
     height: 49px;
     align-self: center;
+
 }
