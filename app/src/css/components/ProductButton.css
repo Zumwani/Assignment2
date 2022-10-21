@@ -18,6 +18,10 @@
   background-color: var(--color-light-gray);
   border: none;
   outline: none;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .button-product p > :first-of-type {
   margin-top: 8px;
@@ -44,7 +48,7 @@
 .button-product:active {
   scale: 105%;
 }
-.button-product button {
+.button-product > div > a > button {
   position: absolute;
   left: 0;
   right: 0;

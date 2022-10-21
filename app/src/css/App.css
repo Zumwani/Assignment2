@@ -192,6 +192,10 @@ section {
   max-width: 342px;
 }
 
+.mb-80 {
+  margin-bottom: 80px;
+}
+
 .padding-0 {
   padding: 0px !important;
 }
@@ -323,28 +327,41 @@ nav div {
 nav div:last-child {
   text-align: end;
 }
-@media only screen and (max-width: 1683px) {
+@media only screen and (max-width: 1000px) {
   nav {
     padding: 0 !important;
     margin: 22px !important;
+    margin-top: 0;
     max-width: 100vw !important;
-    text-align: end;
+    align-items: start;
   }
 }
 
-.mobile-button {
-  display: none;
+.mobile-menu {
+  position: absolute;
+  top: 64px;
+  right: 22px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: var(--color-light-gray);
+  border-color: var(--color-dark);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 12px;
+  width: 200px;
+  z-index: 1;
 }
-@media only screen and (max-width: 100px) {
-  .mobile-button {
-    display: block;
-  }
+.mobile-menu > div {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
   background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
   background-position: left;
+  margin-top: -12px;
   display: block;
   height: 49px;
   align-self: center;

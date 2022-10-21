@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import MainView from './views/MainView';
 import ContactView from './views/ContactView';
 import NotFoundView from './views/NotFoundView';
+import ProductView from './views/ProductView';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainView/>}/>
           <Route path="/contact" element={<ContactView/>}/>
+          <Route path='/product/:title' element={<ProductView/>}/>
           <Route path="*" element={<NotFoundView/>}/>
         </Routes>
         <Footer/>

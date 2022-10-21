@@ -1,9 +1,9 @@
 import React from 'react'
 import '../css/components/IconButton.css'
 
-const IconButton = (props) => {
+const IconButton = ({ icon }) => {
   return (
-    <div className={"button-icon fa " + props.icon}></div>
+    <div className={"button-icon fa " + icon}></div>
   )
 }
 

@@ -1,28 +1,33 @@
 import React from 'react'
 import '../css/components/ProductButton.css'
 import ActionButton from '../components/ActionButton'
-import IconButton from './IconButton'
 import { NavLink } from 'react-router-dom'
 import Rating from './Rating'
 
-const ProductButton = (props) => {
+const ProductButton = ({ product }) => {
+
+  const addToWishlist = (id) => { console.log(id + " added to wishlist"); };
+  const addToCompare = (id) => { console.log(id + " added to compare"); };
+  const addToCart = (id) => { console.log(id + " added to cart"); };
+
   return (
     <div className="button-product container">
-    <img className="sm-row" src="" title="" alt=""></img>
-    <p>{props.category ?? "Category"}</p>
-    <p>{props.title}</p>
-    <Rating count={props.rating ?? 0}/>
-    <p>{props.price}</p>
-    <div className="hover-box">
-        <NavLink to={"/products?id=" + props.id ?? 0}><ActionButton text="Quick View" color="red"/></NavLink>
-        <div className="icon-buttons vertical">
-            <IconButton icon="fa-heart"/>
-            <IconButton icon="fa-code-compare"/>
-            <IconButton icon="fa-bag-shopping"/>
-        </div>
+      <img className="sm-row" src={product.image} title="" alt=""></img>
+      <p className=' mt-3'>{product.category ?? "Category"}</p>
+      <p>{product.title}</p>
+      <Rating count={product.rating ?? 0}/>
+      <p>{product.price}</p>
+      <div className="hover-box">
+          <NavLink to={"/product/" + product.title.replaceAll(" ", "-").toLowerCase()}><ActionButton text="Quick View" color="red"/></NavLink>
+          <div className="icon-buttons d-flex flex-sm-column">
+              <button onClick={() => addToWishlist(product.id)} className='row button-icon fa fa-heart'/>
+              <button onClick={() => addToCompare(product.id)} className='row button-icon fa fa-code-compare'/>
+              <button onClick={() => addToCart(product.id)} className='row button-icon fa fa-bag-shopping'/>
+          </div>
+      </div>
     </div>
-</div>
   )
+
 }
 
 export default ProductButton
