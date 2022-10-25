@@ -1,6 +1,5 @@
 import React from 'react'
 import ActionButton from '../components/ActionButton';
-import "../css/sections/Showcase.css";
 
 const Section1 = () => {
   return (

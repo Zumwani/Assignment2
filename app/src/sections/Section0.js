@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/sections/Section0.css'
 import ActionButton from '../components/ActionButton';
 
 const Showcase = () => {

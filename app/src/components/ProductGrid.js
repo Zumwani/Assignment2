@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ProductButton from './ProductButton'
-import '../css/components/ProductGrid.css'
 
 const ProductGrid = ({products}) => {
 

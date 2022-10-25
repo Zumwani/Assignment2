@@ -1,9 +1,8 @@
 import React from 'react'
-import '../css/components/ActionButton.css';
 
-const ActionButton = (props) => {
+const ActionButton = ({color, simple, text}) => {
   return (
-    <button className={"action " + props.color}>{props.text}</button>
+    <button className={"action " + color + (simple ? " simple" : "")}>{text}</button>
   )
 }
 

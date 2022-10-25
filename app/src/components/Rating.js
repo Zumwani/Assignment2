@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/components/rating.css'
 
 const Rating = (props) => {
   return (

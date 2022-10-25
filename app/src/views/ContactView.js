@@ -1,9 +1,18 @@
 import React from 'react'
-import '../css/views/contact-page.css'
+import BreadcrumbSection from '../sections/BreadcrumbSection'
+import ContactSection from '../sections/ContactSection'
+import MapSection from '../sections/MapSection'
 
 const ContactView = () => {
+
+  document.title = "Contact - Fixxo";
+
   return (
-    <div>Contact</div>
+    <>
+      <BreadcrumbSection currentPage="Contacts"/>
+      <MapSection/>
+      <ContactSection/>
+    </>
   )
 }
 

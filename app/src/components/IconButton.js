@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/components/IconButton.css'
 
 const IconButton = ({ icon }) => {
   return (

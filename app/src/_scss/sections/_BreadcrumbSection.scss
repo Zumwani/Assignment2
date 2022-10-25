@@ -1,0 +1,25 @@
+.breadcrumb {
+
+    ul {
+        text-align: start;
+    }
+
+    li {
+
+        text-align: start;
+        display: inline-block;
+        font-weight: 500;
+        
+        & + li:before {
+            content: "\00a0>\00a0";
+            font-weight: 400;
+            color: var(--color-dark);
+        }
+
+        &:first-of-type::before {
+            content: "🏠";
+        }
+
+    }
+
+}

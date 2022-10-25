@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/components/ProductButton.css'
 import ActionButton from '../components/ActionButton'
 import { NavLink } from 'react-router-dom'
 import Rating from './Rating'

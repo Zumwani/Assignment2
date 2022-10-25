@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../css/views/main-page.css'
 import Showcase from '../sections/Section0'
 import Section1 from '../sections/Section1'
 import ProductSection from '../sections/ProductSection'

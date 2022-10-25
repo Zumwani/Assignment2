@@ -1,11 +1,9 @@
-@import "../variables";
-
 button.action {
     
     color: white;
     text-transform: uppercase;
 
-    &::before {
+    &:not(.simple)::before {
         content: ' ';
         left: 10px;
         top: 10px;
@@ -20,7 +18,7 @@ button.action {
         transform: rotate(90deg);
     }
 
-    &::after {
+    &:not(.simple)::after {
         content: ' ';
         right: 10px;
         bottom: 10px;
