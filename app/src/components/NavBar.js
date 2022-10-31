@@ -9,10 +9,16 @@ const NavBar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-  
+
+  //Set color to transparent when scrollbar is at top
+  document.addEventListener('scroll', (e) => {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("top", window.scrollY == 0);
+  });
+
   return (
     <>
-      <nav className="main-layout">
+      <nav className="main-layout top">
         
         <div>
           <NavLink end to="/" title="Fixxo" className="logo"/>
@@ -21,7 +27,7 @@ const NavBar = () => {
         <div className="text-align-center d-none d-lg-block">
             <NavLink end to="/" className="main-link">Home</NavLink>
             <NavLink end to="/categories" className="main-link">Categories</NavLink>
-            <NavLink to="/product" className="main-link">Products</NavLink>
+            <NavLink to="/products" className="main-link">Products</NavLink>
             <NavLink end to="/contact" className="main-link">Contact</NavLink>
         </div>
         
@@ -42,7 +48,7 @@ const NavBar = () => {
             <div>
               <NavLink end to="/" className="main-link">Home</NavLink>
               <NavLink end to="/categories" className="main-link">Categories</NavLink>
-              <NavLink to="/product" className="main-link">Products</NavLink>
+              <NavLink to="/products" className="main-link">Products</NavLink>
               <NavLink end to="/contact" className="main-link">Contact</NavLink>
               <NavLink end to="/search">Search</NavLink>
               <NavLink end to="/compare">Compare</NavLink>

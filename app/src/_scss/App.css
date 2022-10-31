@@ -314,7 +314,9 @@ section {
 }
 
 nav {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -329,6 +331,13 @@ nav {
   text-align: center;
   padding-left: 22px;
   padding-right: 22px;
+  background-color: var(--color-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.2s ease-out;
+}
+nav.top {
+  background-color: transparent;
+  box-shadow: none;
 }
 nav .fa {
   font-weight: normal;
