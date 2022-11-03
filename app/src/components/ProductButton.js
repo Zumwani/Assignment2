@@ -11,13 +11,13 @@ const ProductButton = ({ product }) => {
 
   return (
     <div className="button-product container">
-      <img className="sm-row" src={product.image} title="" alt=""></img>
+      <img className="sm-row" src={product.imageName} title={product.name} alt=""></img>
       <p className=' mt-3'>{product.category ?? "Category"}</p>
-      <p>{product.title}</p>
+      <p>{product.name}</p>
       <Rating count={product.rating ?? 0}/>
       <p>{product.price}</p>
       <div className="hover-box">
-          <NavLink to={"/product/" + product.title.replaceAll(" ", "-").toLowerCase()}><ActionButton text="Quick View" color="red"/></NavLink>
+          <NavLink to={"/product/" + product.name.replaceAll(" ", "-").toLowerCase()}><ActionButton text="Quick View" color="red"/></NavLink>
           <div className="icon-buttons d-flex flex-sm-column">
               <button onClick={() => addToWishlist(product.id)} className='row button-icon fa fa-heart'/>
               <button onClick={() => addToCompare(product.id)} className='row button-icon fa fa-code-compare'/>

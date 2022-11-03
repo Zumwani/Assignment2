@@ -41,6 +41,12 @@
   margin-right: auto;
 }
 
+.main-layout2 {
+  max-width: var(--max-content-width2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .not-found {
   height: calc(100vh - var(--nav-height) - var(--footer-height) * 2);
 }
@@ -140,18 +146,21 @@ section {
   background-image: url("../img/customer-support.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 22px;
 }
 
 .background-credit-card {
   background-image: url("../img/credit-card.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 22px;
 }
 
 .background-delivery-truck {
   background-image: url("../img/delivery-truck.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 22px;
 }
 
 .height-60 {
@@ -293,6 +302,14 @@ section {
   gap: 10px;
 }
 
+.gap-35 {
+  gap: 35px;
+}
+
+.error {
+  color: red;
+}
+
 [badge] {
   position: relative;
 }
@@ -322,18 +339,21 @@ nav {
       -ms-user-select: none;
           user-select: none;
   z-index: 1;
-  -moz-columns: 3;
-       columns: 3;
-  height: var(--nav-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
   padding-left: 22px;
   padding-right: 22px;
   background-color: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: all 0.2s ease-out;
+}
+nav .main-layout {
+  width: 100%;
+  display: flex;
+  height: var(--nav-height);
+  -moz-columns: 3;
+       columns: 3;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 nav.top {
   background-color: transparent;
@@ -348,19 +368,22 @@ nav a:not(.logo), nav button {
 nav a {
   font-weight: bold;
 }
-nav div {
+nav .container {
   width: 100%;
 }
-nav div:last-child {
+nav .container:last-child {
   text-align: end;
 }
 @media only screen and (max-width: 1000px) {
   nav {
     padding: 0 !important;
-    margin: 22px !important;
     margin-top: 0;
     max-width: 100vw !important;
     align-items: start;
+    margin: 0;
+  }
+  nav .button-icon {
+    margin-right: 22px;
   }
 }
 
@@ -515,8 +538,6 @@ button.action.white::after {
   border-radius: 100%;
   width: 36px !important;
   height: 36px !important;
-  min-width: 36px !important;
-  max-width: 36px !important;
   border: transparent;
   padding: 0;
   box-shadow: 0px 0px 12px 4px #e8e8e8;
@@ -637,10 +658,9 @@ button.action.white::after {
 }
 
 .button-specialty {
-  background-color: var(--light-gray);
+  background-color: var(--color-dark-gray);
   width: 490px;
   height: 232px;
-  background-color: var(--color-dark-gray);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -681,6 +701,49 @@ button.action.white::after {
   pointer-events: none;
 }
 
+.sale-button {
+  display: flex;
+  width: 100%;
+  height: 664px;
+  background-color: var(--color-gray);
+}
+.sale-button > div {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.sale-button button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+}
+
+.info-box {
+  width: 255px;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.info-box > div {
+  width: 60px !important;
+  height: 60px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.info-box h5 {
+  margin: 33px;
+  white-space: pre;
+}
 .breadcrumb ul {
   text-align: start;
 }

@@ -57,18 +57,21 @@
     background-image: url("../img/customer-support.svg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 22px;
 }
 
 .background-credit-card {
     background-image: url("../img/credit-card.svg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 22px;
 }
 
 .background-delivery-truck {
     background-image: url("../img/delivery-truck.svg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 22px;
 }
 
 //#endregion
@@ -137,6 +140,9 @@
 
 //#endregion
 
-.gap-10 {
-    gap: 10px;
+.gap-10 { gap: 10px; }
+.gap-35 { gap: 35px; }
+
+.error {
+    color: red;
 }

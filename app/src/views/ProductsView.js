@@ -15,7 +15,7 @@ const ProductsView = () => {
             <div className='container mt-5'>
                 <h1>{params.title}</h1>
             </div>
-            <ProductGrid products={products}/>
+            <ProductGrid products={products.all}/>
         </>
     )
 

@@ -4,18 +4,22 @@ nav {
     top: 0;
     user-select: none;
     z-index: 1;
-    columns: 3;
-    height: var(--nav-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
     padding-left: 22px;
     padding-right: 22px;
     background-color: var(--color-white);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 0.2s ease-out;
-    
+
+    .main-layout {
+        width: 100%;
+        display: flex;
+        height: var(--nav-height);
+        columns: 3;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
     &.top {
         background-color: transparent;
         box-shadow: none;
@@ -33,19 +37,23 @@ nav {
         font-weight: bold;
     }
 
-    div {
+    .container {
         width: 100%;
-
+        
         &:last-child { text-align: end; }
 
     }
     
     @media only screen and (max-width: 1000px)  {
         padding: 0 !important;
-        margin: 22px !important;
         margin-top: 0;
         max-width: 100vw !important;
         align-items: start;
+        margin: 0;
+
+        .button-icon {
+            margin-right: 22px;
+        }
 
     }
     
