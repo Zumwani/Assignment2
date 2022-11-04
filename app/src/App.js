@@ -16,6 +16,7 @@ import { ProductContext } from './Contexts/Contexts';
 //TODO: Finish rest of main-view
 //TODO: Finish product-page
 //TODO: Add animations
+//TODO: Fix orientation of product button at bottom of page
 
 function App() {
   

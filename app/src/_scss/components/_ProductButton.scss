@@ -1,12 +1,12 @@
 .button-product {
     width: 255px;
-    text-align: center;
+    height: 320px;
+    text-align: start;
     position: relative;
     padding: 0;
     cursor: pointer;
     user-select: none;
     transition: all 0.1s ease;
-    font-size: 16px;
 
     img {
         width: 100%;
@@ -18,16 +18,12 @@
         object-position: center;
         object-fit: cover;
     }
-
-    p>:first-of-type {
+    
+    >p>:first-of-type {
         margin-top: 8px;
         font-size: 13px;
         font-weight: normal;
         color: #616365;
-    }
-
-    >p {
-        font-weight: bold;
     }
 
     .hover-box {

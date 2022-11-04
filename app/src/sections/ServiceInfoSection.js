@@ -3,6 +3,10 @@ import InfoBox from '../components/InfoBox'
 
 const Section9 = () => {
   return (
+    <>
+
+    <div className='line main-layout2'></div>
+
     <section className="main-layout2 container">
         <div className="row">
             <InfoBox icon="background-customer-support" title="Customer Support" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
@@ -11,6 +15,8 @@ const Section9 = () => {
             <InfoBox icon="background-delivery-truck" title="30 Day Return Policy" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
         </div>
     </section>
+
+    </>
   )
 }
 

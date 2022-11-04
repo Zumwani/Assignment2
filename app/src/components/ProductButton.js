@@ -12,8 +12,8 @@ const ProductButton = ({ product }) => {
   return (
     <div className="button-product container">
       <img className="sm-row" src={product.imageName} title={product.name} alt=""></img>
-      <p className=' mt-3'>{product.category ?? "Category"}</p>
-      <p>{product.name}</p>
+      <p className='mt-3'>{product.category ?? "Category"}</p>
+      <b>{product.name}</b>
       <Rating count={product.rating ?? 0}/>
       <p>${product.price}</p>
       <div className="hover-box">

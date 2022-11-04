@@ -1,7 +1,11 @@
 .contact-form {
     margin-bottom: 60px;
-    margin-left: 12px;
-    margin-right: 12px;
+    // margin-left: 12px;
+    // margin-right: 12px;
+    
+    >.container {
+        margin: auto;
+    }
 
     h2 {
         font-size: 18px;

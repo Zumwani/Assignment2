@@ -98,6 +98,13 @@ section {
   text-align: center;
 }
 
+.line {
+  margin-top: 65px;
+  margin-bottom: 65px;
+  background-color: #616365;
+  height: 1px;
+}
+
 .color-white {
   color: white;
 }
@@ -182,11 +189,13 @@ section {
   background-image: url("../img/7.png");
   background-size: cover;
   width: 825px;
+  height: 664px;
 }
 .bg-model.model8 {
   background-image: url("../img/8.png");
   background-size: cover;
   width: 825px;
+  height: 664px;
 }
 .bg-model.model9 {
   background-image: url("../img/9.png");
@@ -258,9 +267,9 @@ section {
 }
 
 .w-fit-content {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 
 .mb-80 {
@@ -346,8 +355,13 @@ section {
   gap: 10px;
 }
 
-.gap-35 {
-  gap: 35px;
+.g-30 {
+  gap: 30px;
+}
+
+.g-30-offset {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .error {
@@ -617,7 +631,8 @@ button.action.white::after {
 
 .button-product {
   width: 255px;
-  text-align: center;
+  height: 320px;
+  text-align: start;
   position: relative;
   padding: 0;
   cursor: pointer;
@@ -626,7 +641,6 @@ button.action.white::after {
       -ms-user-select: none;
           user-select: none;
   transition: all 0.1s ease;
-  font-size: 16px;
 }
 .button-product img {
   width: 100%;
@@ -640,14 +654,11 @@ button.action.white::after {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.button-product p > :first-of-type {
+.button-product > p > :first-of-type {
   margin-top: 8px;
   font-size: 13px;
   font-weight: normal;
   color: #616365;
-}
-.button-product > p {
-  font-weight: bold;
 }
 .button-product .hover-box {
   position: absolute;
@@ -816,8 +827,9 @@ button.action.white::after {
 
 .contact-form {
   margin-bottom: 60px;
-  margin-left: 12px;
-  margin-right: 12px;
+}
+.contact-form > .container {
+  margin: auto;
 }
 .contact-form h2 {
   font-size: 18px;

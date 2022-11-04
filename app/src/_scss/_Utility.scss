@@ -89,12 +89,14 @@
         background-image: url("../img/7.png");
         background-size: cover;
         width: 825px;
+        height: 664px;
     }
     
     &.model8 {
         background-image: url("../img/8.png");
         background-size: cover;
         width: 825px;
+        height: 664px;
     }
     
     &.model9 {
@@ -129,7 +131,7 @@
 .max-width-400 { max-width: 425px; }
 
 .w-fit-content {
-    width: fit-content;
+    width: fit-content !important;
 }
 
 //#endregion
@@ -177,7 +179,12 @@
 //#endregion
 
 .gap-10 { gap: 10px; }
-.gap-35 { gap: 35px; }
+.g-30 { gap: 30px; }
+
+.g-30-offset {
+    margin-left: 30px;
+    margin-right: 30px;
+}
 
 .error {
     color: red;
