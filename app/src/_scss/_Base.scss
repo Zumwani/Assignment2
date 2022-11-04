@@ -4,6 +4,9 @@
     font-family: Poppins;
     overscroll-behavior: none;
 }
+.row {
+    margin-top: 0;
+}
 
 .main-layout {
     max-width: var(--max-content-width);

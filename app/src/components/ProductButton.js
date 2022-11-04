@@ -15,7 +15,7 @@ const ProductButton = ({ product }) => {
       <p className=' mt-3'>{product.category ?? "Category"}</p>
       <p>{product.name}</p>
       <Rating count={product.rating ?? 0}/>
-      <p>{product.price}</p>
+      <p>${product.price}</p>
       <div className="hover-box">
           <NavLink to={"/product/" + product.name.replaceAll(" ", "-").toLowerCase()}><ActionButton text="Quick View" color="red"/></NavLink>
           <div className="icon-buttons d-flex flex-sm-column">

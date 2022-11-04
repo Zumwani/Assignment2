@@ -10,17 +10,17 @@ const Section8 = () => {
         <section className="main-layout2 container row p-0 text-start">
 
             <div className="col container gap-35 p-0">
-                <h5 className="m-0 p-0">Latest Products</h5>
+                <h5 className="mb-4 p-0">Latest Products</h5>
                 <ProductGrid products={products.latest}/>
             </div>
 
             <div className="col container gap-35 p-0">
-                <h5 className="m-0 p-0">Best Selling Products</h5>
+                <h5 className="mb-4 p-0">Best Selling Products</h5>
                 <ProductGrid products={products.bestSelling}/>
             </div>
 
             <div className="col container gap-35 p-0">
-                <h5 className="m-0 p-0">Top Reacted Products</h5>
+                <h5 className="mb-4 p-0">Top Reacted Products</h5>
                 <ProductGrid products={products.topReacted}/>
             </div>
 

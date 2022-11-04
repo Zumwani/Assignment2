@@ -1,5 +1,5 @@
 import React from 'react'
-import BreadcrumbSection from '../sections/BreadcrumbSection'
+import BreadcrumbSection from '../components/BreadcrumbSection'
 import ContactSection from '../sections/ContactSection'
 import MapSection from '../sections/MapSection'
 

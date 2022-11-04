@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
+import BreadcrumbSection from '../components/BreadcrumbSection';
 import { ProductContext } from '../Contexts/Contexts';
-import BreadcrumbSection from '../sections/BreadcrumbSection';
 
 const ProductsView = () => {
 

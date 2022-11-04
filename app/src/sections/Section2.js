@@ -1,13 +1,16 @@
 import React, { useContext } from 'react'
+import ProductGrid from '../components/ProductGrid';
 import { ProductContext } from '../Contexts/Contexts';
-import ProductSection from '../sections/ProductSection';
 
 const Section2 = () => {
 
     const products = useContext(ProductContext);
 
     return (
-        <ProductSection title="Featured Products" products={products.featured}/>
+        <section>
+            <h5 className='mb-5 mt-5'>Featured products</h5>
+            <ProductGrid products={products.featured} columns="10" justifyContent='center'/>
+        </section>
     )
 
 }

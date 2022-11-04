@@ -32,19 +32,21 @@ function App() {
 
   useEffect(() => {
 
-    const fetchProducts = async (take = undefined) => {
-      let url = "https://win22-webapi.azurewebsites.net/api/products" + (take == undefined ? "" : "?take=" + take);
-      return await fetch(url);
+    const fetchAllProducts = async () => {
+      let result = await fetch("https://win22-webapi.azurewebsites.net/api/products");
+      let json = await result.json();
+      setProducts({...products, 
+        all: json, 
+        featured: json.slice(0, 8), 
+        sale1: json.slice(0, 4), 
+        sale2: json.slice(0, 4), 
+        latest: json.slice(0, 3), 
+        bestSelling: json.slice(0, 3),
+        topReacted: json.slice(0, 3)
+      });
     }
-
-  setProducts({...products, all: fetchProducts()});
-  setProducts({...products, featured: fetchProducts(8)});
-  
-  setProducts({...products, sale1: products.featured});
-  setProducts({...products, sale2: products.featured});
-  setProducts({...products, latest: products.featured});
-  setProducts({...products, bestSelling: products.featured});
-  setProducts({...products, topReacted: products.featured});
+    
+    fetchAllProducts();
 
   }, [setProducts]);
 

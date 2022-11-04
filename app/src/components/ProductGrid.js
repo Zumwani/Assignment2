@@ -1,15 +1,15 @@
 import React from 'react'
 import ProductButton from './ProductButton'
 
-const ProductGrid = ({ products }) => {
+const ProductGrid = ({ products, justifyContent = "start", columns }) => {
 
+  products = Array.from(products);
+  
   return (
     <div className='container'>
-      <div className='row row-cols-1 row-cols-md-2 g-3 gap-10'>
+      <div className={'row col-' + columns + ' g-3 justify-content-' + justifyContent}>
         { 
-        Array.isArray(products) && products.length > 0
-        ? products.map(p => <ProductButton key={p.articleNumber} product={p}/>)
-        : <p className='error'>Unable to retrieve products, please try again in a moment.</p>
+        products.map(p => <ProductButton key={p.articleNumber} product={p}/>)
         }
       </div>
     </div>
