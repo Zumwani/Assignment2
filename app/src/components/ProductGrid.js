@@ -1,15 +1,13 @@
 import React from 'react'
 import ProductButton from './ProductButton'
 
-const ProductGrid = ({ products, justifyContent = "start", columns }) => {
-
-  products = Array.from(products);
+const ProductGrid = ({ products, columns, className }) => {
   
   return (
-    <div className='container'>
-      <div className={'row col-' + columns + ' g-3 justify-content-' + justifyContent}>
-        { 
-        products.map(p => <ProductButton key={p.articleNumber} product={p}/>)
+    <div className={'container ' + className ?? ""}>
+      <div className={'row w-100 ml-10 col-' + columns}>
+        {
+          products.map(p => <ProductButton key={p.articleNumber} product={p}/>)
         }
       </div>
     </div>

@@ -9,9 +9,11 @@ const Section6 = () => {
 
     return (
         <>
-        <section className="d-flex flex-rows main-layout">
-            <ProductGrid products={products.sale2}/>
-            <SaleButton title="2 for USD $49"/>
+        <section className="main-layout">
+            <div className='d-flex flex-rows'>
+                <ProductGrid products={products.sale2} columns="1" className="text-end w-540"/>
+                <SaleButton title="2 for USD $49" image="model8"/>
+            </div>
         </section>
         </>
     )

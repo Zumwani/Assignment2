@@ -32,7 +32,7 @@ const NavBar = () => {
               <NavLink end to="/contact" className="main-link">Contact</NavLink>
           </div>
           
-          <div className="container d-none d-lg-block">
+          <div className="container d-none d-lg-block justify-content-right">
               <NavLink end to="/search"><IconButton icon="fa-search"/></NavLink>
               <NavLink end to="/compare"><IconButton icon="fa-code-compare"/></NavLink>
               <NavLink end to="/wishlist" badge="1"><IconButton icon="fa-heart"/></NavLink>

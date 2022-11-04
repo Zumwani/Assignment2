@@ -4,8 +4,14 @@
     font-family: Poppins;
     overscroll-behavior: none;
 }
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding: 0;
+    margin: 0;
+}
+
 .row {
-    margin-top: 0;
+    margin: 0;
 }
 
 .main-layout {

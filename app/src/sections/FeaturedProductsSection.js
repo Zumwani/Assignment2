@@ -9,7 +9,7 @@ const Section2 = () => {
     return (
         <section>
             <h5 className='mb-5 mt-5'>Featured products</h5>
-            <ProductGrid products={products.featured} columns="10" justifyContent='center'/>
+            <ProductGrid products={products.featured} columns="10" className='text-center'/>
         </section>
     )
 

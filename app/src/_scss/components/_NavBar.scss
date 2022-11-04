@@ -20,6 +20,10 @@ nav {
         text-align: center;
     }
 
+    :last-of-type(div) {
+        justify-content: right;
+    }
+
     &.top {
         background-color: transparent;
         box-shadow: none;
@@ -60,6 +64,7 @@ nav {
 }
 
 .mobile-menu {
+
     position: absolute;
     top: 64px;
     right: 22px;
