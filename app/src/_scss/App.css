@@ -429,6 +429,14 @@ nav a:not(.logo), nav button {
 nav a {
   font-weight: bold;
 }
+nav .fa-shopping-bag {
+  position: relative;
+  top: -18px;
+}
+nav .fa-shopping-bag::after {
+  top: -6px;
+  padding-top: 2px;
+}
 nav .container {
   width: 100%;
 }
@@ -949,6 +957,10 @@ button.action.white::after {
   z-index: -1;
   overflow-x: hidden;
   pointer-events: none;
+}
+
+#shopping-cart {
+  width: 500px;
 }
 
 h1 {

@@ -41,6 +41,17 @@ nav {
         font-weight: bold;
     }
 
+    .fa-shopping-bag {
+        position: relative;
+        top: -18px;
+
+        &::after {
+            top: -6px;
+            padding-top: 2px;
+        }
+
+    }
+
     .container {
         width: 100%;
         

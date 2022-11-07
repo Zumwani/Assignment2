@@ -2,16 +2,15 @@ import React from 'react'
 import ActionButton from '../components/ActionButton'
 import { NavLink } from 'react-router-dom'
 import Rating from './Rating'
+import { useShoppingCart } from '../Utility/ShoppingCartUtility'
 
 const ProductButton = ({ product }) => {
 
-  const addToWishlist = (id) => { console.log(id + " added to wishlist"); };
-  const addToCompare = (id) => { console.log(id + " added to compare"); };
-  const addToCart = (id) => { console.log(id + " added to cart"); };
+  const { incrementQuantity } = useShoppingCart();
 
   return (
     <div className="button-product container">
-      <img className="sm-row" src={product.imageName} title={product.name} alt=""></img>
+      <img className="sm-row" src={product.imageName} title={product.name} alt={product.name}></img>
       <p className='mt-3'>{product.category ?? "Category"}</p>
       <b>{product.name}</b>
       <Rating count={product.rating ?? 0}/>
@@ -19,9 +18,9 @@ const ProductButton = ({ product }) => {
       <div className="hover-box">
           <NavLink to={"/product/" + product.name.replaceAll(" ", "-").toLowerCase()}><ActionButton text="Quick View" color="red"/></NavLink>
           <div className="icon-buttons d-flex flex-sm-column">
-              <button onClick={() => addToWishlist(product.id)} className='row button-icon fa fa-heart'/>
-              <button onClick={() => addToCompare(product.id)} className='row button-icon fa fa-code-compare'/>
-              <button onClick={() => addToCart(product.id)} className='row button-icon fa fa-bag-shopping'/>
+              <button className='row button-icon fa fa-heart' onClick={() => {}}/>
+              <button className='row button-icon fa fa-code-compare' onClick={() => {}}/>
+              <button className='row button-icon fa fa-bag-shopping' onClick={() => incrementQuantity({ articleNumber: product.articleNumber, product: product })}/>
           </div>
       </div>
     </div>

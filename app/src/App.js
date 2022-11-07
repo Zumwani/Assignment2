@@ -8,7 +8,7 @@ import NotFoundView from './views/NotFoundView';
 import ProductView from './views/ProductView';
 import ProductsView from './views/ProductsView';
 import { ProductContext, Use_ProductContext } from './Utility/ProductUtility';
-import { useEffect, useState } from 'react';
+import { ShoppingPartProvider } from './Utility/ShoppingCartUtility';
 
 //TODO: Fix responsive
 //TODO: Add quickview popup and fix product buttons
@@ -24,6 +24,7 @@ function App() {
 
   return (
       <BrowserRouter>
+      <ShoppingPartProvider>
         <ProductContext.Provider value={products}>
           <NavBar/>
           <Routes>
@@ -35,6 +36,7 @@ function App() {
           </Routes>
           <Footer/>
         </ProductContext.Provider>
+      </ShoppingPartProvider>
       </BrowserRouter>
   );
 

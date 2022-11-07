@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import { useShoppingCart } from '../Utility/ShoppingCartUtility';
 import IconButton from './IconButton';
 
 const NavBar = () => {
@@ -13,8 +14,10 @@ const NavBar = () => {
   //Set color to transparent when scrollbar is at top
   document.addEventListener('scroll', (e) => {
     const nav = document.querySelector("nav");
-    nav.classList.toggle("top", window.scrollY == 0);
+    nav?.classList?.toggle("top", window.scrollY == 0);
   });
+
+  const { cartQuantity } = useShoppingCart();
 
   return (
     <>
@@ -32,31 +35,14 @@ const NavBar = () => {
               <NavLink end to="/contact" className="main-link">Contact</NavLink>
           </div>
           
-          <div className="container d-none d-lg-block justify-content-right">
-              <NavLink end to="/search"><IconButton icon="fa-search"/></NavLink>
-              <NavLink end to="/compare"><IconButton icon="fa-code-compare"/></NavLink>
-              <NavLink end to="/wishlist" badge="1"><IconButton icon="fa-heart"/></NavLink>
-              <NavLink end to="/cart" badge="3"><IconButton icon="fa-shopping-bag"/></NavLink>
+          <div className="container  justify-content-right">
+              <NavLink end to="/search" className="d-none d-lg-inline"><IconButton icon="fa-search"/></NavLink>
+              <NavLink end to="/compare" className="d-none d-lg-inline"><IconButton icon="fa-code-compare"/></NavLink>
+              <NavLink end to="/wishlist" badge="1" className="d-none d-lg-inline"><IconButton icon="fa-heart"/></NavLink>
+              <button className="button-icon fa fa-shopping-bag" badge={cartQuantity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#shopping-cart" aria-controls="shopping-cart"></button>
           </div>
-          
-          <button onClick={toggleMenu} className="button-icon fa fa-bars d-lg-none"/>
 
         </div>
-
-        <div className='d-lg-none'>
-          <div className={"mobile-menu container " + (showMenu ? "d-block" : "d-none")}>
-            <div>
-              <NavLink end to="/" className="main-link">Home</NavLink>
-              <NavLink end to="/categories" className="main-link">Categories</NavLink>
-              <NavLink to="/products" className="main-link">Products</NavLink>
-              <NavLink end to="/contact" className="main-link">Contact</NavLink>
-              <NavLink end to="/search">Search</NavLink>
-              <NavLink end to="/compare">Compare</NavLink>
-              <NavLink end to="/wishlist" badge="1">Wishlist</NavLink>
-              <NavLink end to="/cart" badge="3">Cart</NavLink>
-            </div>          
-          </div>
-      </div>
 
       </nav>
 

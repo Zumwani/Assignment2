@@ -20,8 +20,10 @@ export const Use_ProductContext = () => {
   useEffect(() => {
 
     const fetchAllProducts = async () => {
+      
       let result = await fetch(url);
       let json = await result.json();
+
       setProducts({...products, 
         all: json, 
         featured: json.slice(0, 8), 
@@ -31,6 +33,7 @@ export const Use_ProductContext = () => {
         bestSelling: json.slice(0, 3),
         topReacted: json.slice(0, 3)
       });
+
     }
     
     fetchAllProducts();
