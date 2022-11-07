@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductGrid from '../components/ProductGrid';
-import { useProductContext } from '../Contexts/Contexts';
+import { useProductContext } from '../Utility/ProductUtility';
 
 const FeaturedProductsSection = () => {
 

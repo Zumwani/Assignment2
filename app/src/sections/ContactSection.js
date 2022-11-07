@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ActionButton from '../components/ActionButton';
 import Input from '../components/Input'
 import TextArea from '../components/TextArea'
-import * as Form from '../Scripts/Form';
+import * as Form from '../Utility/FormUtility';
 
 const ContactSection = () => {
     

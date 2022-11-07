@@ -7,7 +7,7 @@ import ContactView from './views/ContactView';
 import NotFoundView from './views/NotFoundView';
 import ProductView from './views/ProductView';
 import ProductsView from './views/ProductsView';
-import { ProductContext } from './Contexts/Contexts';
+import { ProductContext, Use_ProductContext } from './Utility/ProductUtility';
 import { useEffect, useState } from 'react';
 
 //TODO: Fix responsive
@@ -20,36 +20,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [products, setProducts] = useState(
-    { 
-      all: [], 
-      featured: [], 
-      sale1: [], 
-      sale2: [], 
-      latest: [], 
-      bestSelling: [], 
-      topReacted: [] 
-    });
-
-  useEffect(() => {
-
-    const fetchAllProducts = async () => {
-      let result = await fetch("https://win22-webapi.azurewebsites.net/api/products");
-      let json = await result.json();
-      setProducts({...products, 
-        all: json, 
-        featured: json.slice(0, 8), 
-        sale1: json.slice(0, 4), 
-        sale2: json.slice(0, 4), 
-        latest: json.slice(0, 3), 
-        bestSelling: json.slice(0, 3),
-        topReacted: json.slice(0, 3)
-      });
-    }
-    
-    fetchAllProducts();
-
-  }, [setProducts]);
+  const products = Use_ProductContext();
 
   return (
       <BrowserRouter>

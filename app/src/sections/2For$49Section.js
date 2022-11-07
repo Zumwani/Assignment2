@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductGrid from '../components/ProductGrid'
 import SaleButton from '../components/SaleButton';
-import { useProductContext } from '../Contexts/Contexts';
+import { useProductContext } from '../Utility/ProductUtility';
 
 const _TwoFor$49Section = () => {
 

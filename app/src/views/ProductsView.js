@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import BreadcrumbSection from '../components/BreadcrumbSection';
-import { useProductContext } from '../Contexts/Contexts';
+import { useProductContext } from '../Utility/ProductUtility';
 
 const ProductsView = () => {
 
