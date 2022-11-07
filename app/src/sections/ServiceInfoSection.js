@@ -1,7 +1,7 @@
 import React from 'react'
 import InfoBox from '../components/InfoBox'
 
-const Section9 = () => {
+const ServiceInfoSection = () => {
   return (
     <>
 
@@ -20,4 +20,4 @@ const Section9 = () => {
   )
 }
 
-export default Section9
+export default ServiceInfoSection

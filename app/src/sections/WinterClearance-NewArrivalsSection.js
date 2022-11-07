@@ -1,7 +1,7 @@
 import React from 'react'
 import ActionButton from '../components/ActionButton';
 
-const Section1 = () => {
+const WinterClearanceSection = () => {
   return (
     <section className="main-layout height-560 container row width-100p text-start">
 
@@ -24,4 +24,4 @@ const Section1 = () => {
   )
 }
 
-export default Section1
+export default WinterClearanceSection

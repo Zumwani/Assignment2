@@ -1,7 +1,7 @@
 import React from 'react'
 import ActionButton from '../components/ActionButton';
 
-const section3 = () => {
+const PamelaRaif_LetsBeConsiousSection = () => {
   return (
     <section className="main-layout height-403 container row width-100p gap-5">
         
@@ -23,4 +23,4 @@ const section3 = () => {
   )
 }
 
-export default section3
+export default PamelaRaif_LetsBeConsiousSection

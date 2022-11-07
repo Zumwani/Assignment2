@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import ProductGrid from '../components/ProductGrid';
-import { ProductContext } from '../Contexts/Contexts';
+import { useProductContext } from '../Contexts/Contexts';
 
-const Section2 = () => {
+const FeaturedProductsSection = () => {
 
-    const products = useContext(ProductContext);
+    const products = useProductContext();
 
     return (
         <section className='mx-auto w-fit-content'>
@@ -15,4 +15,4 @@ const Section2 = () => {
 
 }
 
-export default Section2
+export default FeaturedProductsSection

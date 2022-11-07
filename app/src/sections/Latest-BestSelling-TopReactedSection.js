@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import ProductGrid from '../components/ProductGrid';
-import { ProductContext } from '../Contexts/Contexts';
+import { useProductContext } from '../Contexts/Contexts';
 
-const Section8 = () => {
+const Latest_BestSelling_TopReactedSection = () => {
 
-    const products = useContext(ProductContext);
+    const products = useProductContext();
 
     return (
         <section className="main-layout2 container row p-0 text-start">
@@ -29,4 +29,4 @@ const Section8 = () => {
 
 }
 
-export default Section8
+export default Latest_BestSelling_TopReactedSection

@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import ProductGrid from '../components/ProductGrid';
 import BreadcrumbSection from '../components/BreadcrumbSection';
-import { ProductContext } from '../Contexts/Contexts';
+import { useProductContext } from '../Contexts/Contexts';
 
 const ProductsView = () => {
 
     const params = useParams();
-    const products = useContext(ProductContext);
-  
+    const products = useProductContext();
+
     return (
         <>
             <BreadcrumbSection currentPage='Products'></BreadcrumbSection>

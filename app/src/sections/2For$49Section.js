@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import ProductGrid from '../components/ProductGrid'
 import SaleButton from '../components/SaleButton';
-import { ProductContext } from '../Contexts/Contexts';
+import { useProductContext } from '../Contexts/Contexts';
 
-const Section6 = () => {
+const _TwoFor$49Section = () => {
 
-    const products = useContext(ProductContext);
+    const products = useProductContext();
 
     return (
         <>
@@ -20,4 +20,4 @@ const Section6 = () => {
 
 }
 
-export default Section6
+export default _TwoFor$49Section

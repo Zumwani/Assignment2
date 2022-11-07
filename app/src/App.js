@@ -6,9 +6,9 @@ import MainView from './views/MainView';
 import ContactView from './views/ContactView';
 import NotFoundView from './views/NotFoundView';
 import ProductView from './views/ProductView';
-import { useState, createContext, useEffect } from 'react';
 import ProductsView from './views/ProductsView';
 import { ProductContext } from './Contexts/Contexts';
+import { useEffect, useState } from 'react';
 
 //TODO: Fix responsive
 //TODO: Add quickview popup and fix product buttons
@@ -19,7 +19,7 @@ import { ProductContext } from './Contexts/Contexts';
 //TODO: Fix orientation of product button at bottom of page
 
 function App() {
-  
+
   const [products, setProducts] = useState(
     { 
       all: [], 
@@ -52,21 +52,19 @@ function App() {
   }, [setProducts]);
 
   return (
-    <>
       <BrowserRouter>
-        <NavBar/>
         <ProductContext.Provider value={products}>
+          <NavBar/>
           <Routes>
             <Route path="/" element={<MainView/>}/>
-            <Route path='/product/:title' element={<ProductView/>}/>
+            <Route path='/product/:id' element={<ProductView/>}/>
             <Route path='/products' element={<ProductsView/>}/>
             <Route path="/contact" element={<ContactView/>}/>
             <Route path="*" element={<NotFoundView/>}/>
           </Routes>
+          <Footer/>
         </ProductContext.Provider>
-        <Footer/>
       </BrowserRouter>
-    </>
   );
 
 }

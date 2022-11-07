@@ -732,15 +732,16 @@ button.action.white::after {
   z-index: 0;
   cursor: pointer;
   text-align: left;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
 }
 .button-specialty > div {
-  width: 50%;
-}
-.button-specialty::before {
-  content: " ";
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  display: inline-block;
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.6666666667);
+  height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -752,17 +753,20 @@ button.action.white::after {
 .button-specialty:hover {
   box-shadow: 0px 0px 5px #23262A;
 }
-.button-specialty:hover::before {
-  opacity: 50%;
+.button-specialty:hover > div {
   width: 100%;
 }
 .button-specialty:active {
   scale: 105%;
 }
-.button-specialty * {
-  margin-left: 34px;
-  margin-right: 34px;
-  pointer-events: none;
+.button-specialty:nth-of-type(1) {
+  background-image: url("../img/specialty1.png");
+}
+.button-specialty:nth-of-type(2) {
+  background-image: url("../img/specialty2.png");
+}
+.button-specialty:nth-of-type(3) {
+  background-image: url("../img/specialty3.png");
 }
 
 .sale-button {

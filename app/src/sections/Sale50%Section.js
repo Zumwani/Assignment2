@@ -1,7 +1,7 @@
 import React from 'react'
 import ActionButton from '../components/ActionButton';
 
-const Showcase = () => {
+const Sale50PercentSection = () => {
   return (
     <section className="main-layout">
         <div className="showcase background-light-gray">
@@ -18,4 +18,4 @@ const Showcase = () => {
   )
 }
 
-export default Showcase
+export default Sale50PercentSection
