@@ -4,7 +4,7 @@ import { useProductContext } from '../Utility/ProductUtility';
 
 const FeaturedProductsSection = () => {
 
-    const products = useProductContext();
+    const { products } = useProductContext();
 
     return (
         <section className='mx-auto w-fit-content'>

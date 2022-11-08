@@ -3,11 +3,10 @@ import ShoppingCart from "../components/ShoppingCart";
 
 const ShoppingCartContext = createContext();
 
-export const useShoppingCart = () => {
-    return useContext(ShoppingCartContext);
-}
+export const useShoppingCart = () =>
+    useContext(ShoppingCartContext);
 
-export const ShoppingPartProvider = ({ children }) => {
+export const ShoppingCartProvider = ({ children }) => {
 
     const [cartItems, setCartItems] = useState([]);
 
@@ -15,9 +14,8 @@ export const ShoppingPartProvider = ({ children }) => {
         (quantity, item) => item.quantity + quantity, 0
     );
 
-    const getItemsQuantity = (articleNumber) => {
-        return cartItems.find(item => item.articleNumber === articleNumber)?.quantity || 0;
-    }
+    const getItemsQuantity = (articleNumber) =>
+        cartItems.find(item => item.articleNumber === articleNumber)?.quantity || 0;
 
     const decrementQuantity = (cartItem, by = 1) => incrementQuantity(cartItem, -by);
     const incrementQuantity = (cartItem, by = 1) => {
@@ -32,23 +30,17 @@ export const ShoppingPartProvider = ({ children }) => {
             if (items.find(item => item.articleNumber === articleNumber) == null)
                 return [...items, { articleNumber, product, quantity: by }];
             else
-                return items.map(item => {
-                    if (item.articleNumber === articleNumber && item.quantity + by >= 1) {
-                            return {...item, quantity: item.quantity + by};
-                    }
-                    else
-                        return item;
-                })
+                return items.map(item => 
+                    item.articleNumber === articleNumber && item.quantity + by >= 1
+                    ? {...item, quantity: item.quantity + by}
+                    : item);
 
         });
 
     }
 
-    const removeItem = (articleNumber) => {
-        setCartItems(items => {
-            return items.filter(item => item.articleNumber !== articleNumber);
-        });
-    }
+    const removeItem = (articleNumber) =>
+        setCartItems(items => items.filter(item => item.articleNumber !== articleNumber));
 
     return <>
     <ShoppingCartContext.Provider value={{ cartItems, cartQuantity, getItemsQuantity, incrementQuantity, decrementQuantity, removeItem }}>

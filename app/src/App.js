@@ -7,8 +7,8 @@ import ContactView from './views/ContactView';
 import NotFoundView from './views/NotFoundView';
 import ProductView from './views/ProductView';
 import ProductsView from './views/ProductsView';
-import { ProductContext, Use_ProductContext } from './Utility/ProductUtility';
-import { ShoppingPartProvider } from './Utility/ShoppingCartUtility';
+import { ProductContext, ProductProvider, Use_ProductContext } from './Utility/ProductUtility';
+import { ShoppingCartProvider } from './Utility/ShoppingCartUtility';
 
 //TODO: Fix responsive
 //TODO: Add quickview popup and fix product buttons
@@ -20,12 +20,12 @@ import { ShoppingPartProvider } from './Utility/ShoppingCartUtility';
 
 function App() {
 
-  const products = Use_ProductContext();
+  // const products = Use_ProductContext();
 
   return (
       <BrowserRouter>
-      <ShoppingPartProvider>
-        <ProductContext.Provider value={products}>
+      <ShoppingCartProvider>
+        <ProductProvider>
           <NavBar/>
           <Routes>
             <Route path="/" element={<MainView/>}/>
@@ -35,8 +35,8 @@ function App() {
             <Route path="*" element={<NotFoundView/>}/>
           </Routes>
           <Footer/>
-        </ProductContext.Provider>
-      </ShoppingPartProvider>
+        </ProductProvider>
+      </ShoppingCartProvider>
       </BrowserRouter>
   );
 

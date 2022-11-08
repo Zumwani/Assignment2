@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useShoppingCart } from '../Utility/ShoppingCartUtility';
 import IconButton from './IconButton';
@@ -37,7 +37,7 @@ const NavBar = () => {
               <NavLink end to="/search" className="d-none d-lg-inline"><IconButton icon="fa-search"/></NavLink>
               <NavLink end to="/compare" className="d-none d-lg-inline"><IconButton icon="fa-code-compare"/></NavLink>
               <NavLink end to="/wishlist" badge="1" className="d-none d-lg-inline"><IconButton icon="fa-heart"/></NavLink>
-
+              
               {/* The following buttons opens sidebar, first is large viewport, second is small */}
               <button className="button-icon sidebar d-none d-lg-inline fa fa-shopping-bag" badge={cartQuantity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#shopping-cart" aria-controls="shopping-cart"></button>
               <button className="button-icon sidebar fa fa-bars d-inline d-lg-none" badge={cartQuantity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#shopping-cart" aria-controls="shopping-cart"></button>

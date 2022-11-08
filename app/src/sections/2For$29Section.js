@@ -5,7 +5,7 @@ import { useProductContext } from '../Utility/ProductUtility';
 
 const _TwoFor$29Section = () => {
 
-    const products = useProductContext();
+    const {products} = useProductContext();
 
     return (
         <>

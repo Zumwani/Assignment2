@@ -35,6 +35,14 @@
       overscroll-behavior: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  .container, .container > * {
+    justify-content: space-evenly !important;
+  }
+  h5 {
+    text-align: center;
+  }
+}
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   padding: 0;
   margin: 0;

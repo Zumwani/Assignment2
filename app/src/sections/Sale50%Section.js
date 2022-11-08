@@ -9,14 +9,11 @@ const Sale50PercentSection = () => {
         <div className="showcase background-light-gray">
           <img src={image1}/>
           <img src={image2}/>
-        {/* </div> */}
-        
-        {/* <div className="showcase-content section horizontal"> */}
-            <div>
-                <h1 className="text-align-center">SALE UP<br/>To 50% Off</h1>
-                <h5>Online shopping free home delivery over $100</h5>
-                <ActionButton text="Shop now" color="red"/>
-            </div>
+          <div>
+              <h1 className="text-align-center">SALE UP<br/>To 50% Off</h1>
+              <h5>Online shopping free home delivery over $100</h5>
+              <ActionButton text="Shop now" color="red"/>
+          </div>
         </div>
     </section>
   )
