@@ -1,3 +1,152 @@
 #shopping-cart {
+
     width: 500px;
+
+    .btn-close {
+        position: absolute;
+        right: 22px;
+        top: 22px;
+    }
+
+    .offcanvas-body {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .offcanvas-header {
+        padding-bottom: 0;
+    }
+
+    .total-price {
+        position: relative;
+        margin-top: 6px;
+        height: 64px;
+
+        b {
+            position: absolute;
+            right: 22px;
+        }
+
+    }
+
+    .checkout {
+        position: absolute;
+        right: 22px;
+        top: 32px;
+        padding: 6px 12px;
+        width: fit-content;
+        height: fit-content;
+        background-color: #20202020;
+    }
+    
+    button {
+
+        padding: 0px;
+        height: 25px;
+        width: fit-content;
+        border-radius: 5px;
+        background-color: transparent;
+
+        transition: all 0.1s ease;
+
+        &:hover {
+            background-color: #aaaaaa;
+        }
+
+        &:active {
+            background-color: gray;
+        }
+
+    }
+
+    .shopping-cart-item {
+        
+        display: flex;
+        
+        &:hover {
+            background-color: #20202020;
+        }
+
+        img {
+            width: 52px;
+            margin-right: 22px;
+            margin-left: 22px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .quantity {
+            width: fit-content;        
+            user-select: none;
+
+            span {
+                padding-left: 6px;
+                padding-right: 6px;
+                min-height: 100px;
+                border: 1px solid #20202020;
+                border-left: 0;
+                border-right: 0;
+            }
+            
+            button {
+                background-color: #00000010;
+                width: 25px;
+            }
+
+            button:nth-of-type(1) {
+                border-radius: 5px 0 0 5px;
+                border: 1px solid #20202020;
+            }
+
+            button:nth-of-type(2) {
+                border-radius: 0 5px 5px 0;
+                border: 1px solid #20202020;
+            }
+
+        }
+
+        .price {
+            text-align: right;
+            margin-right: 22px;
+        }
+
+    }
+
+    .nav {
+
+        div {
+            width: 100%;
+            text-align: center;
+            display: flex;
+        }
+
+        a {
+
+            height: 28px;
+            text-align: center;
+
+            &:hover {
+                background-color: gray;
+            }
+
+        }
+
+        p {
+            width: fit-content;
+            margin: auto;
+
+            &:after {
+                top: 0;
+                right: -16px;
+            }
+
+        }
+
+    }
+
+}
+
+.scrollable {
+    overflow-y: auto;
 }

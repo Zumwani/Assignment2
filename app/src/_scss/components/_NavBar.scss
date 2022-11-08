@@ -41,7 +41,7 @@ nav {
         font-weight: bold;
     }
 
-    .fa-shopping-bag {
+    .sidebar {
         position: relative;
         top: -18px;
 
@@ -59,15 +59,19 @@ nav {
 
     }
     
-    @media only screen and (max-width: 1000px)  {
-        padding: 0 !important;
+    @media only screen and (max-width: 991px)  {
+        // padding: 0 !important;
         margin-top: 0;
         max-width: 100vw !important;
         align-items: start;
-        margin: 0;
+        // margin: 0;
 
         .button-icon {
             margin-right: 22px;
+        }
+
+        .sidebar {
+            top: 0;
         }
 
     }

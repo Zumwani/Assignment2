@@ -5,17 +5,14 @@ import IconButton from './IconButton';
 
 const NavBar = () => {
 
-  let [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
   //Set color to transparent when scrollbar is at top
-  document.addEventListener('scroll', (e) => {
+  const setTransparentWhenScrollbarIsAtTop = () => {
     const nav = document.querySelector("nav");
     nav?.classList?.toggle("top", window.scrollY == 0);
-  });
+  }
+
+  document.addEventListener('scroll', setTransparentWhenScrollbarIsAtTop);
+  setTransparentWhenScrollbarIsAtTop();
 
   const { cartQuantity } = useShoppingCart();
 
@@ -35,11 +32,16 @@ const NavBar = () => {
               <NavLink end to="/contact" className="main-link">Contact</NavLink>
           </div>
           
-          <div className="container  justify-content-right">
+          <div className="container justify-content-right">
+
               <NavLink end to="/search" className="d-none d-lg-inline"><IconButton icon="fa-search"/></NavLink>
               <NavLink end to="/compare" className="d-none d-lg-inline"><IconButton icon="fa-code-compare"/></NavLink>
               <NavLink end to="/wishlist" badge="1" className="d-none d-lg-inline"><IconButton icon="fa-heart"/></NavLink>
-              <button className="button-icon fa fa-shopping-bag" badge={cartQuantity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#shopping-cart" aria-controls="shopping-cart"></button>
+
+              {/* The following buttons opens sidebar, first is large viewport, second is small */}
+              <button className="button-icon sidebar d-none d-lg-inline fa fa-shopping-bag" badge={cartQuantity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#shopping-cart" aria-controls="shopping-cart"></button>
+              <button className="button-icon sidebar fa fa-bars d-inline d-lg-none" badge={cartQuantity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#shopping-cart" aria-controls="shopping-cart"></button>
+
           </div>
 
         </div>

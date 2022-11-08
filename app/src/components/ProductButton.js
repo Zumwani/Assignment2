@@ -3,6 +3,7 @@ import ActionButton from '../components/ActionButton'
 import { NavLink } from 'react-router-dom'
 import Rating from './Rating'
 import { useShoppingCart } from '../Utility/ShoppingCartUtility'
+import { formatCurrency } from '../Utility/CurrencyUtility'
 
 const ProductButton = ({ product }) => {
 
@@ -14,7 +15,7 @@ const ProductButton = ({ product }) => {
       <p className='mt-3'>{product.category ?? "Category"}</p>
       <b>{product.name}</b>
       <Rating count={product.rating ?? 0}/>
-      <p>${product.price}</p>
+      <p>{formatCurrency(product.price)}</p>
       <div className="hover-box">
           <NavLink to={"/product/" + product.name.replaceAll(" ", "-").toLowerCase()}><ActionButton text="Quick View" color="red"/></NavLink>
           <div className="icon-buttons d-flex flex-sm-column">
