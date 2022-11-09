@@ -7,20 +7,17 @@ import ContactView from './views/ContactView';
 import NotFoundView from './views/NotFoundView';
 import ProductView from './views/ProductView';
 import ProductsView from './views/ProductsView';
-import { ProductContext, ProductProvider, Use_ProductContext } from './Utility/ProductUtility';
+import CategoriesView from './views/CategoriesView';
+import { ProductProvider } from './Utility/ProductUtility';
 import { ShoppingCartProvider } from './Utility/ShoppingCartUtility';
 
 //TODO: Fix responsive
-//TODO: Add quickview popup and fix product buttons
 //TODO: Fix bad animations on buttons when using touch
-//TODO: Finish rest of main-view
-//TODO: Finish product-page
+//TODO: Fix the two weird align sections
 //TODO: Add animations
 //TODO: Fix orientation of product button at bottom of page
 
 function App() {
-
-  // const products = Use_ProductContext();
 
   return (
       <BrowserRouter>
@@ -29,9 +26,12 @@ function App() {
           <NavBar/>
           <Routes>
             <Route path="/" element={<MainView/>}/>
-            <Route path='/product/:id' element={<ProductView/>}/>
+            <Route path='/product/:name' element={<ProductView/>}/>
             <Route path='/products' element={<ProductsView/>}/>
+            <Route path='/products/:id' element={<ProductsView/>}/>
             <Route path="/contact" element={<ContactView/>}/>
+            <Route path="/categories" element={<CategoriesView/>}/>
+            <Route path="/categories/:category" element={<CategoriesView/>}/>
             <Route path="*" element={<NotFoundView/>}/>
           </Routes>
           <Footer/>

@@ -1,24 +1,26 @@
-import React, { useContext } from 'react'
-import { useParams } from 'react-router-dom';
+import React from 'react'
 import ProductGrid from '../components/ProductGrid';
 import BreadcrumbSection from '../components/BreadcrumbSection';
 import { useProductContext } from '../Utility/ProductUtility';
+import { useParams } from 'react-router-dom';
 
 const ProductsView = () => {
 
-    const params = useParams();
-    const products = useProductContext();
+    const { id } = useParams();
+    const { products } = useProductContext();
 
     return (
         <>
-            <BreadcrumbSection currentPage='Products'></BreadcrumbSection>
-            <div className='container mt-5'>
-                <h1>{params.title}</h1>
-            </div>
-            <ProductGrid products={products.all}/>
+            <BreadcrumbSection currentPage='Products'/>
+            <ProductGrid products={getProducts(id, products)} innerClassName="justify-content-center" className="main-layout2"/>
         </>
     )
 
 }
+
+const getProducts = (id, products) =>
+    products.all.find(p => p != null && p.category.toLowerCase() == id)
+    ? products.all.filter(p => p.category.toLowerCase() === id)
+    : products.all;
 
 export default ProductsView

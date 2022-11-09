@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductButton from './ProductButton'
 
-const ProductGrid = ({ products, columns, className, innerClassName }) => {
+const ProductGrid = ({ products, columns = 1, className, innerClassName, createButtonCallback = createProductButton }) => {
   
   return (
     <div className={'container ' + (className ?? "")}>
@@ -9,12 +9,16 @@ const ProductGrid = ({ products, columns, className, innerClassName }) => {
         {
           products == null || products.length == 0
           ? <p className='error'>An error occured when retrieving products, please try again in a moment.</p>
-          : products.map(p => <ProductButton key={p.articleNumber} product={p}/>)
+          : products.map(p => createButtonCallback(p))
         }
       </div>
     </div>
   )
 
 }
+
+const createProductButton = (item) => {
+  return item == null ? null : <ProductButton key={item.articleNumber} product={item}/>
+} 
 
 export default ProductGrid

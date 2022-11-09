@@ -9,7 +9,7 @@ const ContactView = () => {
 
   return (
     <>
-      <BreadcrumbSection currentPage="Contacts"/>
+      <BreadcrumbSection currentPage="Contact"/>
       <MapSection/>
       <ContactSection/>
     </>

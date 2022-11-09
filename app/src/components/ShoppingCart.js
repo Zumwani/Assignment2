@@ -25,16 +25,16 @@ const ShoppingCart = () => {
             }
             </div>
 
-            <div className='position-relative flex-grow-0 flex-shrink-0'>
+            <div className='position-relative flex-grow-0 flex-shrink-0 mb-2'>
                 <p className='total-price'><b>{ "Price total: " + formatCurrency(cartItems.reduce((partialSum, item) => partialSum + (item.product.price * item.quantity), 0))}</b></p>
                 <button className='checkout'>Checkout</button>
             </div>
 
-            <div className='d-lg-none nav mb-4 mt-1 flex-grow-0 flex-shrink-0'>
+            <div className='d-lg-none nav mb-4 flex-grow-0 flex-shrink-0'>
                 <div className={"d-flex flex-column"}>
                     <NavLink end to="/" className="main-link">Home</NavLink>
-                    <NavLink end to="/categories" className="main-link">Categories</NavLink>
-                    <NavLink to="/products" className="main-link">Products</NavLink>
+                    <NavLink to="/categories" className="main-link">Categories</NavLink>
+                    <NavLink to="/product" className="main-link">Products</NavLink>
                     <NavLink end to="/contact" className="main-link">Contact</NavLink>
                     <NavLink end to="/search">Search</NavLink>
                     <NavLink end to="/compare">Compare</NavLink>

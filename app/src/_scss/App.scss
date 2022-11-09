@@ -8,6 +8,7 @@
 @use "components/_Footer";
 @use "components/_ProductGrid";
 @use "components/_Rating";
+@use "components/_InfoBox";
 
 //Buttons
 @use "components/_ActionButton";
@@ -15,7 +16,7 @@
 @use "components/_ProductButton";
 @use "components/_SpecialtyButton";
 @use "components/_SaleButton";
-@use "components/_InfoBox";
+@use "components/_categoryButton";
 
 //Sections
 // @use "sections/_ProductSection";

@@ -6,6 +6,7 @@
         position: absolute;
         right: 22px;
         top: 22px;
+        width: 22px;
     }
 
     .offcanvas-body {
@@ -47,15 +48,16 @@
         width: fit-content;
         border-radius: 5px;
         background-color: transparent;
+        padding: 6px;
 
         transition: all 0.1s ease;
 
         &:hover {
-            background-color: #aaaaaa;
+            background-color: #aaaaaa !important;
         }
 
         &:active {
-            background-color: gray;
+            background-color: gray !important;
         }
 
     }
@@ -92,6 +94,7 @@
             button {
                 background-color: #00000010;
                 width: 25px;
+                padding: 0;
             }
 
             button:nth-of-type(1) {
