@@ -13,10 +13,8 @@ import { ShoppingCartProvider } from './Utility/ShoppingCartUtility';
 import { WishlistProvider } from './Utility/WishlistUtility';
 
 //TODO: Fix responsive
-//TODO: Fix bad animations on buttons when using touch
 //TODO: Fix the two weird align sections
-//TODO: Add animations
-//TODO: Fix orientation of product button at bottom of page
+//TODO: Fix titles
 
 function App() {
 
