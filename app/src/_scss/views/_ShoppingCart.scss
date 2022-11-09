@@ -1,4 +1,4 @@
-#shopping-cart {
+#shopping-cart, #wishlist {
 
     width: 500px;
 
@@ -70,6 +70,10 @@
             background-color: #20202020;
         }
 
+        a:hover {
+            background-color: transparent;
+        }
+
         img {
             width: 52px;
             margin-right: 22px;
@@ -78,9 +82,14 @@
             margin-bottom: 6px;
         }
 
+        .item-info {
+            align-self: center;
+        }
+
         .quantity {
             width: fit-content;        
             user-select: none;
+            margin-bottom: 6px;
 
             span {
                 padding-left: 6px;
@@ -112,11 +121,14 @@
         .price {
             text-align: right;
             margin-right: 22px;
+            align-self: center;
         }
 
     }
 
     .nav {
+
+        margin-top: 12px;
 
         div {
             width: 100%;

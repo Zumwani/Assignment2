@@ -4,11 +4,11 @@ import Breadcrumb from '../components/BreadcrumbSection';
 import CategoryButton from '../components/CategoryButton';
 import ProductButton from '../components/ProductButton';
 import ProductGrid from '../components/ProductGrid';
-import { useProductContext } from '../Utility/ProductUtility'
+import { useProducts } from '../Utility/ProductUtility'
 
 const CategoriesView = () => {
   
-  const { products } = useProductContext();
+  const { products } = useProducts();
   let categories = [...new Set(products.all.map(p => p.category))];
 
   const getImage = (category) =>

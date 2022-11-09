@@ -1,11 +1,11 @@
 import React from 'react'
 import ProductGrid from '../components/ProductGrid'
 import SaleButton from '../components/SaleButton';
-import { useProductContext } from '../Utility/ProductUtility';
+import { useProducts } from '../Utility/ProductUtility';
 
 const _TwoFor$29Section = () => {
 
-    const {products} = useProductContext();
+    const {products} = useProducts();
 
     return (
         <>

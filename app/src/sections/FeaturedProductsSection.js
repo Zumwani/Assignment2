@@ -1,10 +1,10 @@
 import React from 'react'
 import ProductGrid from '../components/ProductGrid';
-import { useProductContext } from '../Utility/ProductUtility';
+import { useProducts } from '../Utility/ProductUtility';
 
 const FeaturedProductsSection = () => {
 
-    const { products } = useProductContext();
+    const { products } = useProducts();
 
     return (
         <section className='mx-auto w-fit-content'>

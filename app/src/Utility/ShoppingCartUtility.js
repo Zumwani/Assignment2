@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import ShoppingCart from "../components/ShoppingCart";
+import ShoppingCart from "../views/ShoppingCartView";
 
 const ShoppingCartContext = createContext();
 
@@ -42,8 +42,12 @@ export const ShoppingCartProvider = ({ children }) => {
     const removeItem = (articleNumber) =>
         setCartItems(items => items.filter(item => item.articleNumber !== articleNumber));
 
+    const toCartItem = (product) => {
+        return { articleNumber: product.articleNumber, product: product, quantity: 1 };
+    }
+
     return <>
-    <ShoppingCartContext.Provider value={{ cartItems, cartQuantity, getItemsQuantity, incrementQuantity, decrementQuantity, removeItem }}>
+    <ShoppingCartContext.Provider value={{ cartItems, cartQuantity, getItemsQuantity, incrementQuantity, decrementQuantity, removeItem, toCartItem }}>
         {children}
         <ShoppingCart/>
     </ShoppingCartContext.Provider>

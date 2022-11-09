@@ -1,13 +1,13 @@
 import React from 'react'
 import ProductGrid from '../components/ProductGrid';
 import BreadcrumbSection from '../components/BreadcrumbSection';
-import { useProductContext } from '../Utility/ProductUtility';
+import { useProducts } from '../Utility/ProductUtility';
 import { useParams } from 'react-router-dom';
 
 const ProductsView = () => {
 
     const { id } = useParams();
-    const { products } = useProductContext();
+    const { products } = useProducts();
 
     return (
         <>

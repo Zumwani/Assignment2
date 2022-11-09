@@ -4,7 +4,7 @@ const url = "https://win22-webapi.azurewebsites.net/api/products/";
 
 export const ProductContext = createContext();
 
-export const useProductContext = () => {
+export const useProducts = () => {
   return useContext(ProductContext);
 }
 
@@ -26,6 +26,9 @@ export const ProductProvider = ({ children }) => {
       topReacted: [] 
     });
   
+    const getProduct = (articleNumber) =>
+      products.all.find(p => p.articleNumber == articleNumber);
+
     useEffect(() => {
   
       const fetchAllProducts = async () => {
@@ -50,9 +53,15 @@ export const ProductProvider = ({ children }) => {
     }, [setProducts]);
 
   return <>
-  <ProductContext.Provider value={{ products }}>
+  <ProductContext.Provider value={{ products, getProduct }}>
       {children}
   </ProductContext.Provider>
   </>
 
 }
+
+export const productURL = (product) =>
+  product == null ? null : "/product/" + product.name.replaceAll(" ", "-").toLowerCase();
+
+export const categoryURL = (product) =>
+product == null ? null : "/products/" + product.category.replaceAll(" ", "-").toLowerCase();

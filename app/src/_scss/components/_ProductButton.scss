@@ -44,10 +44,7 @@
         }
     }
 
-    &:active {
-    }
-
-    >div>a>button {
+    > div > a > button {
         position: absolute;
         left: 0;
         right: 0;
@@ -70,13 +67,26 @@
         font-weight: normal;
     }
 
+    .fa-heart.active {
+        color: var(--color-red);
+    }
+
     &.small {
         width: 351px;
+        height: auto;
         text-align: left;
-    
+        display: flex;
+        flex-direction: row;
+
+        .info {
+            position: relative;
+            top: -16px;
+        }
+
         img {
             width: 160px;
             height: 132px;
+            margin-right: 12px;
             padding: 0;
         }
     

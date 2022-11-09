@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useShoppingCart } from '../Utility/ShoppingCartUtility';
+import { useWishlist } from '../Utility/WishlistUtility';
 import IconButton from './IconButton';
 
 const NavBar = () => {
@@ -15,6 +16,7 @@ const NavBar = () => {
   setTransparentWhenScrollbarIsAtTop();
 
   const { cartQuantity } = useShoppingCart();
+  const { wishlistQuanitity } = useWishlist();
 
   return (
     <>
@@ -36,7 +38,8 @@ const NavBar = () => {
 
               <NavLink end to="/search" className="d-none d-lg-inline"><IconButton icon="fa-search"/></NavLink>
               <NavLink end to="/compare" className="d-none d-lg-inline"><IconButton icon="fa-code-compare"/></NavLink>
-              <NavLink end to="/wishlist" badge="1" className="d-none d-lg-inline"><IconButton icon="fa-heart"/></NavLink>
+
+              <button className="button-icon sidebar fa fa-heart" badge={wishlistQuanitity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#wishlist" aria-controls="wishlist"></button>
 
               {/* The following buttons opens sidebar, first is large viewport, second is small */}
               <button className="button-icon sidebar d-none d-lg-inline fa fa-shopping-bag" badge={cartQuantity ?? 0} type="button" data-bs-toggle="offcanvas" data-bs-target="#shopping-cart" aria-controls="shopping-cart"></button>

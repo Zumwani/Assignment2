@@ -50,16 +50,11 @@ a {
     cursor: pointer;
 
     &:hover {
-        color: var(--color-red);
+        color: #df6d6d !important;
     }
     
     &.active {
         color: var(--color-red);
-            
-        &:hover {
-            filter: brightness(80%);
-        }
-
     }
 
     &.underline {

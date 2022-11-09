@@ -1,33 +1,29 @@
 import React from 'react'
+import ShoppingCartItem from '../components/ShoppingCartItem';
 import { NavLink } from 'react-router-dom';
-import { formatCurrency } from '../Utility/CurrencyUtility';
-import { useShoppingCart } from '../Utility/ShoppingCartUtility'
-import ShoppingCartItem from './ShoppingCartItem';
+import { useProducts } from '../Utility/ProductUtility';
+import { useWishlist } from '../Utility/WishlistUtility';
+import WishlistItem from '../components/WishlistItem';
 
-const ShoppingCart = () => {
+const WishlistView = () => {
 
-    const { cartItems } = useShoppingCart();
+    const { wishlistItems } = useWishlist();
+    const { getProduct } = useProducts();
 
-  return (
-
-    <div className="offcanvas offcanvas-end" tabIndex="-1" id="shopping-cart" aria-labelledby="shopping-cart">
+    return (
+    <div className="offcanvas offcanvas-end" tabIndex="-1" id="wishlist" aria-labelledby="wishlist">
         <div className="offcanvas-header">
-            <h5 id="shopping-cart-label"><i className='fa-regular fa-shopping-bag me-3'></i>Your shopping cart</h5>
+            <h5 id="shopping-cart-label"><i className='fa-regular fa-shopping-bag me-3'></i>Your wishlist</h5>
             <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
             
             <div className='scrollable flex-grow-1'>
-            { 
-                cartItems.length == 0
-                ? <p className='ms-5 mb-2'>No items in cart.</p>
-                : cartItems.map(item => (<ShoppingCartItem key={item.articleNumber} item={item}/>)) 
+            {
+                wishlistItems == null || wishlistItems.length == 0
+                ? <p className='ms-5 mb-2'>No items in wishlist.</p>
+                : wishlistItems.map(articleNumber => (<WishlistItem key={articleNumber} product={getProduct(articleNumber)}/>)) 
             }
-            </div>
-
-            <div className='position-relative flex-grow-0 flex-shrink-0 mb-2'>
-                <p className='total-price'><b>{ "Price total: " + formatCurrency(cartItems.reduce((partialSum, item) => partialSum + (item.product.price * item.quantity), 0))}</b></p>
-                <button className='checkout'>Checkout</button>
             </div>
 
             <div className='d-lg-none nav mb-4 flex-grow-0 flex-shrink-0'>
@@ -44,8 +40,8 @@ const ShoppingCart = () => {
 
         </div>
     </div>
-  )
+    )
 
 }
 
-export default ShoppingCart
+export default WishlistView

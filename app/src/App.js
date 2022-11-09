@@ -10,6 +10,7 @@ import ProductsView from './views/ProductsView';
 import CategoriesView from './views/CategoriesView';
 import { ProductProvider } from './Utility/ProductUtility';
 import { ShoppingCartProvider } from './Utility/ShoppingCartUtility';
+import { WishlistProvider } from './Utility/WishlistUtility';
 
 //TODO: Fix responsive
 //TODO: Fix bad animations on buttons when using touch
@@ -21,22 +22,24 @@ function App() {
 
   return (
       <BrowserRouter>
-      <ShoppingCartProvider>
         <ProductProvider>
-          <NavBar/>
-          <Routes>
-            <Route path="/" element={<MainView/>}/>
-            <Route path='/product/:name' element={<ProductView/>}/>
-            <Route path='/products' element={<ProductsView/>}/>
-            <Route path='/products/:id' element={<ProductsView/>}/>
-            <Route path="/contact" element={<ContactView/>}/>
-            <Route path="/categories" element={<CategoriesView/>}/>
-            <Route path="/categories/:category" element={<CategoriesView/>}/>
-            <Route path="*" element={<NotFoundView/>}/>
-          </Routes>
-          <Footer/>
+          <ShoppingCartProvider>
+            <WishlistProvider>
+                  <NavBar/>
+                  <Routes>
+                    <Route path="/" element={<MainView/>}/>
+                    <Route path='/product/:name' element={<ProductView/>}/>
+                    <Route path='/products' element={<ProductsView/>}/>
+                    <Route path='/products/:id' element={<ProductsView/>}/>
+                    <Route path="/contact" element={<ContactView/>}/>
+                    <Route path="/categories" element={<CategoriesView/>}/>
+                    <Route path="/categories/:category" element={<CategoriesView/>}/>
+                    <Route path="*" element={<NotFoundView/>}/>
+                  </Routes>
+                  <Footer/>
+            </WishlistProvider>
+          </ShoppingCartProvider>
         </ProductProvider>
-      </ShoppingCartProvider>
       </BrowserRouter>
   );
 
