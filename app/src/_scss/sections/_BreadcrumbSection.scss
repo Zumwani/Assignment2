@@ -9,6 +9,7 @@
         text-align: start;
         display: inline-block;
         font-weight: 500;
+        text-transform: capitalize;
         
         & + li:before {
             content: "\00a0>\00a0";

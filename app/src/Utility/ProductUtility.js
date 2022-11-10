@@ -27,7 +27,7 @@ export const ProductProvider = ({ children }) => {
     });
   
     const getProduct = (articleNumber) =>
-      products.all.find(p => p.articleNumber == articleNumber);
+      products.all.find(p => p.articleNumber == articleNumber || p.name.replaceAll(" ", "-").toLowerCase() == articleNumber);
 
     useEffect(() => {
   
@@ -64,4 +64,4 @@ export const productURL = (product) =>
   product == null ? null : "/product/" + product.name.replaceAll(" ", "-").toLowerCase();
 
 export const categoryURL = (product) =>
-product == null ? null : "/products/" + product.category.replaceAll(" ", "-").toLowerCase();
+  product == null ? null : "/products/" + product.category.replaceAll(" ", "-").toLowerCase();

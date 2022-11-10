@@ -14,6 +14,7 @@ import { WishlistProvider } from './Utility/WishlistUtility';
 
 //TODO: Fix responsive
 //TODO: Fix the two weird align sections
+//TODO: Add product view
 //TODO: Fix titles
 
 function App() {

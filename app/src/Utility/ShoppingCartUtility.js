@@ -14,7 +14,7 @@ export const ShoppingCartProvider = ({ children }) => {
         (quantity, item) => item.quantity + quantity, 0
     );
 
-    const getItemsQuantity = (articleNumber) =>
+    const getItemQuantity = (articleNumber) =>
         cartItems.find(item => item.articleNumber === articleNumber)?.quantity || 0;
 
     const decrementQuantity = (cartItem, by = 1) => incrementQuantity(cartItem, -by);
@@ -22,20 +22,27 @@ export const ShoppingCartProvider = ({ children }) => {
         
         if (cartItem == null || cartItem.articleNumber == null)
             return;
+        
+        let { articleNumber, product } = cartItem;
 
-        const { articleNumber, product } = cartItem;
+        //We may have recieved product obj directly, that is fine
+        if (product == null && articleNumber != null)
+            product = cartItem;
 
-        setCartItems(items => {
-            
-            if (items.find(item => item.articleNumber === articleNumber) == null)
-                return [...items, { articleNumber, product, quantity: by }];
-            else
-                return items.map(item => 
-                    item.articleNumber === articleNumber && item.quantity + by >= 1
-                    ? {...item, quantity: item.quantity + by}
-                    : item);
+        if (getItemQuantity(product.articleNumber) + by < 1)
+            removeItem(product.articleNumber);
+        else
+            setCartItems(items => {
+                
+                if (items.find(item => item.articleNumber === articleNumber) == null)
+                    return [...items, { articleNumber, product, quantity: by }];
+                else
+                    return items.map(item => 
+                        item.articleNumber === articleNumber && item.quantity + by >= 1
+                        ? {...item, quantity: item.quantity + by}
+                        : item);
 
-        });
+            });
 
     }
 
@@ -47,7 +54,7 @@ export const ShoppingCartProvider = ({ children }) => {
     }
 
     return <>
-    <ShoppingCartContext.Provider value={{ cartItems, cartQuantity, getItemsQuantity, incrementQuantity, decrementQuantity, removeItem, toCartItem }}>
+    <ShoppingCartContext.Provider value={{ cartItems, cartQuantity, getItemQuantity, incrementQuantity, decrementQuantity, removeItem, toCartItem }}>
         {children}
         <ShoppingCart/>
     </ShoppingCartContext.Provider>
