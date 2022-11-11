@@ -21,7 +21,7 @@ const ProductView = () => {
     const product = getProduct(name);
     const relatedProducts = products.all.slice(0, 4);
     
-    document.title = product.name + " - Fixxo";
+    document.title = product == null ? "Fixxo" : product.name + " - Fixxo";
     
     return (
         product == null
