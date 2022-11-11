@@ -30,12 +30,12 @@ export const WishlistProvider = ({ children }) => {
 
     }
 
-    return <>
-    <WishlistContext.Provider value={{ wishlistItems, wishlistQuanitity, toggleItem, isWishlisted }}>
-        {children}
-        <WishlistView/>
-    </WishlistContext.Provider>
-    </>
-
+    return (
+        <WishlistContext.Provider value={{ wishlistItems, wishlistQuanitity, toggleItem, isWishlisted }}>
+            {children}
+            <WishlistView/>
+        </WishlistContext.Provider>
+    )
+    
 }
 

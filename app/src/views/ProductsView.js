@@ -9,8 +9,6 @@ const ProductsView = () => {
     const { id } = useParams();
     const { products } = useProducts();
     
-    document.title = (id == null ? "Products" : capitalize(id)) + " - Fixxo";
-
     return (
         <>
             <BreadcrumbSection currentPage={<NavLink to="/products/">Products</NavLink>} page2={id == null ? null : id}/>

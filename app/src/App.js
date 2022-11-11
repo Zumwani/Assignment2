@@ -1,5 +1,6 @@
-import './_scss/App.css';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './_scss/App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import MainView from './views/MainView';
@@ -11,19 +12,22 @@ import CategoriesView from './views/CategoriesView';
 import { ProductProvider } from './Utility/ProductUtility';
 import { ShoppingCartProvider } from './Utility/ShoppingCartUtility';
 import { WishlistProvider } from './Utility/WishlistUtility';
+import { NavigationManager } from './Utility/NavigationUtility';
 
 //TODO: Fix responsive
 //TODO: Fix the two weird align sections
 //TODO: Fix scroll when using NavLink
 
-const App = () =>
-(
+const App = () => {
+
+return (
   <BrowserRouter>
     <ProductProvider>
       <ShoppingCartProvider>
         <WishlistProvider>
-              <NavBar/>
-              <Routes>
+            <NavBar/>
+            <NavigationManager>
+            <Routes>
                 <Route path="/" element={<MainView/>} title="sak"/>
                 <Route path='/product/:name' element={<ProductView/>}/>
                 <Route path='/products' element={<ProductsView/>}/>
@@ -32,12 +36,14 @@ const App = () =>
                 <Route path="/categories" element={<CategoriesView/>}/>
                 <Route path="/categories/:category" element={<CategoriesView/>}/>
                 <Route path="*" element={<NotFoundView/>}/>
-              </Routes>
-              <Footer/>
+            </Routes>
+            <Footer/>
+          </NavigationManager>
         </WishlistProvider>
       </ShoppingCartProvider>
     </ProductProvider>
   </BrowserRouter>
 );
+}
 
 export default App;

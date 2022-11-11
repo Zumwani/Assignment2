@@ -53,11 +53,11 @@ export const ShoppingCartProvider = ({ children }) => {
         return { articleNumber: product.articleNumber, product: product, quantity: 1 };
     }
 
-    return <>
-    <ShoppingCartContext.Provider value={{ cartItems, cartQuantity, getItemQuantity, incrementQuantity, decrementQuantity, removeItem, toCartItem }}>
-        {children}
-        <ShoppingCart/>
-    </ShoppingCartContext.Provider>
-    </>
-
+    return (
+        <ShoppingCartContext.Provider value={{ cartItems, cartQuantity, getItemQuantity, incrementQuantity, decrementQuantity, removeItem, toCartItem }}>
+            {children}
+            <ShoppingCart/>
+        </ShoppingCartContext.Provider>
+    )
+    
 }

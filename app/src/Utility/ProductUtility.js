@@ -52,11 +52,11 @@ export const ProductProvider = ({ children }) => {
   
     }, [setProducts]);
 
-  return <>
-  <ProductContext.Provider value={{ products, getProduct }}>
-      {children}
-  </ProductContext.Provider>
-  </>
+  return (
+    <ProductContext.Provider value={{ products, getProduct }}>
+        {children}
+    </ProductContext.Provider>
+  );
 
 }
 
