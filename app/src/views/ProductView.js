@@ -8,6 +8,9 @@ import { formatCurrency } from '../Utility/CurrencyUtility';
 import { useProducts } from '../Utility/ProductUtility';
 import { useShoppingCart } from '../Utility/ShoppingCartUtility';
 import ProductGrid from '../components/ProductGrid';
+import TabControl from '../components/TabControl';
+import Tab from '../components/Tab';
+import Toggle from '../components/Toggle';
 
 const ProductView = () => {
     
@@ -37,6 +40,7 @@ const ProductView = () => {
                 </div>
 
                 <div className='w-100 text-start'>
+
                     <h5 className='mb-0'>{product.name}</h5>
                     <p className='color-gray'>{ "SKU: " + product.articleNumber}</p>
                     <p className='color-gray'>BRAND: The Northland</p>
@@ -44,45 +48,46 @@ const ProductView = () => {
                     <h6 className='m-2 ms-0'>{formatCurrency(product.price)}</h6>
                     <p className='color-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                     
-                    <div className='container'>
-                        <div className='column'>
-                            <p>dsad</p>
+                    <div className='container ms-0 mt-4'>
+                        <div className='row'>
+
+                            <div className='col p-0 align-content-center d-flex flex-column'>
+                                <p className='row h-40 align-items-center my-3'>Size:</p>
+                                <p className='row h-40 align-items-center my-3'>Color:</p>
+                                <p className='row h-40 align-items-center my-3'>Quantity:</p>
+                                <p className='row h-40 align-items-center my-3'>Share:</p>
+                            </div>
+
+                            <div className='col p-0 d-flex flex-column'>
+                                <fieldset className='row h-40 align-content-center my-3 justify-content-between me-5'>
+                                    <Toggle id="size-s" name="size" text="S"/>
+                                    <Toggle id="size-m" name="size" text="M"/>
+                                    <Toggle id="size-l" name="size" text="L"/>
+                                    <Toggle id="size-x" name="size" text="X"/>
+                                </fieldset>
+                                <select id='color' className='row h-40 align-content-center my-3'>
+                                    <option>Black</option>
+                                    <option>Blue</option>
+                                    <option>Green</option>
+                                    <option>White</option>
+                                    <option>Red</option>
+                                </select>
+                                <div className='row h-40 align-content-center pt-2 my-3'>
+                                    <UpDown count={getItemQuantity(product.articleNumber)}
+                                        onIncrement={() => incrementQuantity(product)}
+                                        onDecrement={() => decrementQuantity(product)}
+                                        onRemove={() => removeItem(product.articleNumber)}/>
+                                </div>
+                                <div className='d-flex flex-rows h-40 align-items-center justify-content-between w-110 my-3'>
+                                    <ExternalLink link="https://facebook.com" className="fa fa-facebook"></ExternalLink>
+                                    <ExternalLink link="https://instagram.com" className="fab fa-instagram"></ExternalLink>
+                                    <ExternalLink link="https://twitter.com" className="fab fa-twitter"></ExternalLink>
+                                    <ExternalLink link="https://google.com" className="fab fa-google"></ExternalLink>
+                                    <ExternalLink link="https://linkedin.com" className="fab fa-linkedin"></ExternalLink>
+                                </div>
+                            </div>
                         </div>
-                        <div className='column'>
 
-                            <p>f</p>
-                        </div>
-
-                    </div>
-
-                    <fieldset>
-                        <input id='size-s' name='size' type="radio"/>
-                        <label for="size-s">S</label>
-                        <input id='size-m' name='size' type="radio"/>
-                        <label for="size-m">M</label>
-                        <input id='size-l' name='size' type="radio"/>
-                        <label for="size-l">L</label>
-                        <input id='size-x' name='size' type="radio"/>
-                        <label for="size-x">X</label>
-                    </fieldset>
-                    <select id='color'>
-                        <option>Black</option>
-                        <option>Blue</option>
-                        <option>Green</option>
-                        <option>White</option>
-                        <option>Red</option>
-                    </select>
-                    <UpDown count={getItemQuantity(product.articleNumber)}
-                        onIncrement={() => incrementQuantity(product)}
-                        onDecrement={() => decrementQuantity(product)}
-                        onRemove={() => removeItem(product.articleNumber)}/>
-
-                    <div className='d-flex flex-rows'>
-                        <ExternalLink link="https://facebook.com" className="fa fa-facebook"></ExternalLink>
-                        <ExternalLink link="https://instagram.com" className="fab fa-instagram"></ExternalLink>
-                        <ExternalLink link="https://twitter.com" className="fab fa-twitter"></ExternalLink>
-                        <ExternalLink link="https://google.com" className="fab fa-google"></ExternalLink>
-                        <ExternalLink link="https://linkedin.com" className="fab fa-linkedin"></ExternalLink>
                     </div>
 
                 </div>
@@ -91,38 +96,29 @@ const ProductView = () => {
 
             <section className='main-layout2'>
 
-                <fieldset>
-                    <input id='tab-description' name='tab' type="radio"/>
-                    <label for="tab-description" className='tab-header w-fit-content'>Description</label>
-                    <input id='tab-additional' name='tab' type="radio"/>
-                    <label for="tab-additional" className='tab-header w-fit-content'>Additional</label>
-                    <input id='tab-shopping-returns' name='tab' type="radio"/>
-                    <label for="tab-shopping-returns" className='tab-header w-fit-content'>Shopping & Returns</label>
-                    <input id='tab-reviews' name='tab' type="radio"/>
-                    <label for="tab-reviews" className='tab-header w-fit-content'>Reviews</label>
-                </fieldset>
-
-                <tab className="tab-description active text-start ps-2">
-                    <p className='mt-4'>Way extensive and dejection get delivered deficient sincerity gentleman age. Too end instrument possession contrasted motionless. Calling offence six joy feeling. Coming merits and was talent enough far. Sir joy northward sportsmen education. Discovery incommode earnestly no he commanded if. Put still any about manor heard.</p>
-                    <p className='mt-4'>* Village did removed enjoyed explain nor ham saw calling talking.</p>
-                    <p>* Securing as informed declared or margaret.</p>
-                    <p>* Joy horrible moreover man feelings own shy.</p>
-                    <p className='mt-4'>On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem. </p>
-                </tab>
-
-                <tab className="tab-additional active">
-
-                </tab>
-
-                <tab className="tab-shopping-returns active">
-
-                </tab>
-
-                <tab className="tab-reviews active">
-
-                </tab>
+                <TabControl>
+                    <Tab id="tab-description" header="Description">
+                        <article className='tab-description active text-start ps-2'>
+                            <p className='mt-4'>Way extensive and dejection get delivered deficient sincerity gentleman age. Too end instrument possession contrasted motionless. Calling offence six joy feeling. Coming merits and was talent enough far. Sir joy northward sportsmen education. Discovery incommode earnestly no he commanded if. Put still any about manor heard.</p>
+                            <p className='mt-4'>* Village did removed enjoyed explain nor ham saw calling talking.</p>
+                            <p>* Securing as informed declared or margaret.</p>
+                            <p>* Joy horrible moreover man feelings own shy.</p>
+                            <p className='mt-4'>On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem. </p>
+                        </article>
+                    </Tab>
+                    <Tab id="tab-additional" header="Additional">
+                        <h5 className='mt-5'>Additional tab</h5>
+                    </Tab>
+                    <Tab id="tab-shopping-returns" header="Shopping & Returns">
+                        <h5 className='mt-5'>Shopping & Returns tab</h5>
+                    </Tab>
+                    <Tab id="tab-reviews" header="Reviews">
+                        <h5 className='mt-5'>Reviews tab</h5>
+                    </Tab>
+                </TabControl>
 
             </section>
+            
             <section className='main-layout2'>
                 <h5 className='text-start'>Related Products</h5>
                 <ProductGrid products={relatedProducts}/>

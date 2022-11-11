@@ -93,50 +93,6 @@ section {
     height: 1px;
 }
 
-//#region Radio button
-
-input[type="radio"] {
-
-    //Hide radio button (we use the label the trigger the radio button)
-    display: none;
-    
-    & + label {
-        background-color: #FFFFFF;
-        width: 30px;
-        height: 30px;
-        border: 1px solid black;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6px 9px 7px 8px;
-        margin-top: 20px;
-        margin-left: 8px;
-        cursor: pointer;
-        transition: all 0.1s ease;
-    }
-
-    &:checked + label {
-        background-color: lightgray;
-    }
-
-}
-
-//#endregion
-//#region Tabs
-
-tab {
-    
-    display: none;
-
-    &.active {
-        display: block;
-    }
-
-}
-
-//#endregion
-
 fieldset {
 
     display: flex;

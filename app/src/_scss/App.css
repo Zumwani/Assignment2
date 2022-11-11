@@ -110,35 +110,6 @@ section {
   height: 1px;
 }
 
-input[type=radio] {
-  display: none;
-}
-input[type=radio] + label {
-  background-color: #FFFFFF;
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px 9px 7px 8px;
-  margin-top: 20px;
-  margin-left: 8px;
-  cursor: pointer;
-  transition: all 0.1s ease;
-}
-input[type=radio]:checked + label {
-  background-color: lightgray;
-}
-
-tab {
-  display: none;
-}
-tab.active {
-  display: block;
-}
-
 fieldset {
   display: flex;
   flex-direction: row;
@@ -326,6 +297,10 @@ fieldset legend {
 
 .h-40 {
   height: 40px;
+}
+
+.w-110 {
+  width: 110px;
 }
 
 .mb-80 {
@@ -628,6 +603,8 @@ footer .fa-linkedin:hover {
       -ms-user-select: none;
           user-select: none;
   margin-bottom: 6px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .up-down span {
   padding-left: 6px;
@@ -658,6 +635,61 @@ footer .fa-linkedin:hover {
 .up-down button:nth-of-type(2) {
   border-radius: 0 5px 5px 0;
   border: 1px solid rgba(32, 32, 32, 0.1254901961);
+}
+
+.tab-control {
+  position: relative;
+}
+.tab-control input[type=radio].toggle + label {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  padding-left: 22px;
+  padding-right: 22px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.1s ease;
+}
+.tab-control input[type=radio].toggle + label:first-of-type {
+  padding-left: 0;
+}
+.tab-control input[type=radio].toggle + label:last-of-type {
+  padding-right: 0;
+}
+.tab-control input[type=radio].toggle:checked + label {
+  background-color: transparent;
+  color: var(--color-red);
+  border-bottom: 1px solid var(--color-red);
+}
+.tab-control .tab {
+  display: none;
+}
+.tab-control .tab.active {
+  display: block;
+}
+
+input[type=radio].toggle {
+  display: none;
+}
+input[type=radio].toggle + label {
+  background-color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 9px 7px 8px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+input[type=radio].toggle:checked + label {
+  background-color: lightgray;
 }
 
 button.action {
