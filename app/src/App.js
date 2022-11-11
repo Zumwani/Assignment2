@@ -16,7 +16,6 @@ import { NavigationManager } from './Utility/NavigationUtility';
 
 //TODO: Fix responsive
 //TODO: Fix the two weird align sections
-//TODO: Fix scroll when using NavLink
 
 const App = () => {
 
