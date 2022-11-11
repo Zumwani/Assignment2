@@ -14,33 +14,30 @@ import { WishlistProvider } from './Utility/WishlistUtility';
 
 //TODO: Fix responsive
 //TODO: Fix the two weird align sections
-//TODO: Fix titles
+//TODO: Fix scroll when using NavLink
 
-function App() {
-
-  return (
-      <BrowserRouter>
-        <ProductProvider>
-          <ShoppingCartProvider>
-            <WishlistProvider>
-                  <NavBar/>
-                  <Routes>
-                    <Route path="/" element={<MainView/>}/>
-                    <Route path='/product/:name' element={<ProductView/>}/>
-                    <Route path='/products' element={<ProductsView/>}/>
-                    <Route path='/products/:id' element={<ProductsView/>}/>
-                    <Route path="/contact" element={<ContactView/>}/>
-                    <Route path="/categories" element={<CategoriesView/>}/>
-                    <Route path="/categories/:category" element={<CategoriesView/>}/>
-                    <Route path="*" element={<NotFoundView/>}/>
-                  </Routes>
-                  <Footer/>
-            </WishlistProvider>
-          </ShoppingCartProvider>
-        </ProductProvider>
-      </BrowserRouter>
-  );
-
-}
+const App = () =>
+(
+  <BrowserRouter>
+    <ProductProvider>
+      <ShoppingCartProvider>
+        <WishlistProvider>
+              <NavBar/>
+              <Routes>
+                <Route path="/" element={<MainView/>} title="sak"/>
+                <Route path='/product/:name' element={<ProductView/>}/>
+                <Route path='/products' element={<ProductsView/>}/>
+                <Route path='/products/:id' element={<ProductsView/>}/>
+                <Route path="/contact" element={<ContactView/>}/>
+                <Route path="/categories" element={<CategoriesView/>}/>
+                <Route path="/categories/:category" element={<CategoriesView/>}/>
+                <Route path="*" element={<NotFoundView/>}/>
+              </Routes>
+              <Footer/>
+        </WishlistProvider>
+      </ShoppingCartProvider>
+    </ProductProvider>
+  </BrowserRouter>
+);
 
 export default App;

@@ -11,20 +11,24 @@ import LatestAndBestSellingAndTopReactedProducts from '../sections/Latest-BestSe
 import ServiceInfo from '../sections/ServiceInfoSection'
 
 const MainView = () => {
-    return (
-    <>
-      <Sale50/>
-      <WinterClearanceAndNewArrivals/>
-      <FeaturedProducts/>
-      <PamelaRaifAndLetsBeConscious/>
-      <OurSpecialty/>
-      <_2For$29/>
-      <_2For$49/>
-      <UpTo70Off/>
-      <LatestAndBestSellingAndTopReactedProducts/>
-      <ServiceInfo/>
-    </>
-  )
+
+  document.title = "Fixxo";
+
+  return (
+  <>
+    <Sale50/>
+    <WinterClearanceAndNewArrivals/>
+    <FeaturedProducts/>
+    <PamelaRaifAndLetsBeConscious/>
+    <OurSpecialty/>
+    <_2For$29/>
+    <_2For$49/>
+    <UpTo70Off/>
+    <LatestAndBestSellingAndTopReactedProducts/>
+    <ServiceInfo/>
+  </>
+)
+
 }
 
 export default MainView

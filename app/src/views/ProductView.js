@@ -17,10 +17,12 @@ const ProductView = () => {
     const { name } = useParams();
     const { getProduct, products } = useProducts();
     const { incrementQuantity, decrementQuantity, getItemQuantity, removeItem } = useShoppingCart();
-
+    
     const product = getProduct(name);
     const relatedProducts = products.all.slice(0, 4);
-
+    
+    document.title = product.name + " - Fixxo";
+    
     return (
         product == null
         ? <p className='error'>Could not retrieve product, please try again in a moment.</p>

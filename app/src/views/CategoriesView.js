@@ -1,13 +1,14 @@
 import React from 'react'
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { useProducts } from '../Utility/ProductUtility'
 import Breadcrumb from '../components/BreadcrumbSection';
 import CategoryButton from '../components/CategoryButton';
-import ProductButton from '../components/ProductButton';
 import ProductGrid from '../components/ProductGrid';
-import { useProducts } from '../Utility/ProductUtility'
 
 const CategoriesView = () => {
   
+  document.title = "Categories - Fixxo";
+
   const { products } = useProducts();
   let categories = [...new Set(products.all.map(p => p.category))];
 
