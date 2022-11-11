@@ -27,7 +27,7 @@ const ProductView = () => {
 
             <section className='main-layout2 d-flex flex-rows'>
 
-                <div className='w-100 h-100'>
+                <div className='w-100 h-100 me-5'>
                     <img src={product.imageName} className="w-100 h-100"/>
                     <div className='d-flex flex-rows w-100 h-100 mt-4 justify-content-between'>
                         <img src={product.imageName} className="w-160" />
@@ -36,50 +36,55 @@ const ProductView = () => {
                     </div>
                 </div>
 
-                <div className='w-100'>
-                    <h5>{product.name}</h5>
-                    <p>{ "SKU: " + product.articleNumber + "    " + "BRAND: The Northland" }</p>
+                <div className='w-100 text-start'>
+                    <h5 className='mb-0'>{product.name}</h5>
+                    <p className='color-gray'>{ "SKU: " + product.articleNumber}</p>
+                    <p className='color-gray'>BRAND: The Northland</p>
                     <Rating count={product.rating}/>
-                    <h6>{formatCurrency(product.price)}</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <div className='d-flex flex-row'>
-                        <h6>Size:</h6>
-                        <fieldset>
-                            <input id='size-s' name='size' type="radio"/>
-                            <label for="size-s">S</label>
-                            <input id='size-m' name='size' type="radio"/>
-                            <label for="size-m">M</label>
-                            <input id='size-l' name='size' type="radio"/>
-                            <label for="size-l">L</label>
-                            <input id='size-x' name='size' type="radio"/>
-                            <label for="size-x">X</label>
-                        </fieldset>
+                    <h6 className='m-2 ms-0'>{formatCurrency(product.price)}</h6>
+                    <p className='color-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    
+                    <div className='container'>
+                        <div className='column'>
+                            <p>dsad</p>
+                        </div>
+                        <div className='column'>
+
+                            <p>f</p>
+                        </div>
+
                     </div>
+
+                    <fieldset>
+                        <input id='size-s' name='size' type="radio"/>
+                        <label for="size-s">S</label>
+                        <input id='size-m' name='size' type="radio"/>
+                        <label for="size-m">M</label>
+                        <input id='size-l' name='size' type="radio"/>
+                        <label for="size-l">L</label>
+                        <input id='size-x' name='size' type="radio"/>
+                        <label for="size-x">X</label>
+                    </fieldset>
+                    <select id='color'>
+                        <option>Black</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+                    <UpDown count={getItemQuantity(product.articleNumber)}
+                        onIncrement={() => incrementQuantity(product)}
+                        onDecrement={() => decrementQuantity(product)}
+                        onRemove={() => removeItem(product.articleNumber)}/>
+
                     <div className='d-flex flex-rows'>
-                        <h6>Color:</h6>
-                        <select id='color'>
-                            <option>Black</option>
-                            <option>Blue</option>
-                            <option>Green</option>
-                            <option>White</option>
-                            <option>Red</option>
-                        </select>
-                    </div>
-                    <div className='d-flex flex-row'>
-                        <h6>Quantity:</h6>
-                        <UpDown count={getItemQuantity(product.articleNumber)}
-                            onIncrement={() => incrementQuantity(product)}
-                            onDecrement={() => decrementQuantity(product)}
-                            onRemove={() => removeItem(product.articleNumber)}/>
-                    </div>
-                    <div className='d-flex flex-rows'>
-                        <h6>Share:</h6>
                         <ExternalLink link="https://facebook.com" className="fa fa-facebook"></ExternalLink>
                         <ExternalLink link="https://instagram.com" className="fab fa-instagram"></ExternalLink>
                         <ExternalLink link="https://twitter.com" className="fab fa-twitter"></ExternalLink>
                         <ExternalLink link="https://google.com" className="fab fa-google"></ExternalLink>
                         <ExternalLink link="https://linkedin.com" className="fab fa-linkedin"></ExternalLink>
                     </div>
+
                 </div>
 
             </section>
