@@ -12,6 +12,9 @@ const ProductButton = ({ product, className }) => {
   const { incrementQuantity } = useShoppingCart();
   const { toggleItem, isWishlisted } = useWishlist();
 
+  if (product == null)
+    return null;
+
   let productUrl = productURL(product);
   let categoryUrl = categoryURL(product);
 

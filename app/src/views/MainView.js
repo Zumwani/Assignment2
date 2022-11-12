@@ -4,11 +4,10 @@ import WinterClearanceAndNewArrivals from '../sections/WinterClearance-NewArriva
 import FeaturedProducts from '../sections/FeaturedProductsSection'
 import PamelaRaifAndLetsBeConscious from '../sections/PamelaRaif-LetsBeConsciousSection'
 import OurSpecialty from '../sections/OurSpecialtySection'
-import _2For$29 from '../sections/2For$29Section'
-import _2For$49 from '../sections/2For$49Section'
 import UpTo70Off from '../sections/UpTo70%OffSection'
 import LatestAndBestSellingAndTopReactedProducts from '../sections/Latest-BestSelling-TopReactedSection'
 import ServiceInfo from '../sections/ServiceInfoSection'
+import WeirdAlignSections from '../sections/WeirdAlignSections'
 
 const MainView = () => {
 
@@ -21,8 +20,7 @@ const MainView = () => {
     <FeaturedProducts/>
     <PamelaRaifAndLetsBeConscious/>
     <OurSpecialty/>
-    <_2For$29/>
-    <_2For$49/>
+    <WeirdAlignSections/>
     <UpTo70Off/>
     <LatestAndBestSellingAndTopReactedProducts/>
     <ServiceInfo/>

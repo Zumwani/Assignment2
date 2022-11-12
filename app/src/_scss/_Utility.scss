@@ -1,5 +1,11 @@
 //#region Color / Background
 
+.text-s-white {
+    @media only screen and (max-width: 900px) {
+        color: white;
+    }
+}
+
 .color-white {
     color: white;
 }
@@ -16,7 +22,7 @@
     background-color: var(--color-light-gray);
 }
 
-.background-gray {
+.bg-gray {
     background-color: var(--color-gray);
 }
 
@@ -88,6 +94,7 @@
     &.model7 {
         background-image: url("../img/7.png");
         background-size: cover;
+        background-position: center;
         width: 825px;
         height: 664px;
     }
@@ -95,6 +102,7 @@
     &.model8 {
         background-image: url("../img/8.png");
         background-size: cover;
+        background-position: center;
         width: 825px;
         height: 664px;
     }
@@ -102,6 +110,7 @@
     &.model9 {
         background-image: url("../img/9.png");
         background-size: cover;
+        background-position: center;
     }
 
 }
@@ -112,7 +121,7 @@
 .height-60 { height: 60px !important; }
 .height-232 { height: 232px; }
 .height-400 { height: 400px; }
-.height-403 { height: 403px; }
+.h-403 { height: 403px; }
 .height-560 { height: 560px; }
 .height-670 { height: 670px; }
 
@@ -129,14 +138,17 @@
 .width-100p { width: 100%; }
 
 .max-width-342 { max-width: 342px; }
-.max-width-400 { max-width: 425px; }
+.max-width-425 { max-width: 425px; }
 
 .w-fit-content {
     width: fit-content !important;
 }
 
-.h-40 { height: 40px;}
-.w-110 { width: 110px;}
+.h-40 { height: 40px; }
+.w-110 { width: 110px; }
+.h-560 { height: 560px; }
+
+.w-min-0 { min-width: 0 !important; }
 
 //#endregion
 //#region Padding / Margin
@@ -151,7 +163,6 @@
 .padding-64 { padding: 64px; }
 
 .margin-0 { margin: 0px; }
-.margin-49 { margin: 49px; }
 .margin-30 { margin: 30px; }
 
 .margin-vertical-30 { margin-top: 30px; margin-bottom: 30px; }
@@ -168,19 +179,6 @@
 .margin-left-32 { margin-left: 32px; }
 
 //#endregion
-//#region Alignment
-
-.align-bottom {
-    position: absolute;
-    bottom: 0;
-}
-
-.align-right {
-    position: absolute;
-    right: 0;
-}
-
-//#endregion
 
 .gap-10 { gap: 10px; }
 .g-30 { gap: 30px; }
@@ -193,3 +191,23 @@
 .error {
     color: red;
 }
+
+.s-align-center {
+    @media only screen and(max-width: 900px) {
+        text-align: center !important;
+        max-width: auto !important;
+    }
+}
+
+//#region xxxl (min-width: 1722px)
+//The size at where the two weird alignment sections in main view start becoming a problem
+
+@media only screen and (min-width: 1722px) {
+
+    .d-xxxl-flex { display: flex !important; }
+    .mt-xxxl-0 { margin-top: 0 !important; }
+    .d-xxxl-block { display: block !important; }
+    .d-xxxl-none {display: none !important;}    
+}
+
+//#endregion

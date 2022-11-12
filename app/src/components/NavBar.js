@@ -21,20 +21,20 @@ const NavBar = () => {
   return (
     <>
       <nav className="top">
-        <div className='main-layout'>
+        <div>
         
-          <div className='container'>
+          <div className='w-100'>
             <NavLink end to="/" title="Fixxo" className="logo"/>
           </div>
           
-          <div className="container text-align-center d-none d-lg-block">
+          <div className="w-100 text-align-center d-none d-lg-block">
               <NavLink end to="/" className="main-link">Home</NavLink>
               <NavLink to="/categories" className="main-link">Categories</NavLink>
               <NavLink to="/products" className="main-link">Products</NavLink>
               <NavLink end to="/contact" className="main-link">Contact</NavLink>
           </div>
           
-          <div className="container justify-content-right mt-3">
+          <div className="w-100 justify-content-end mt-3 nav-bar d-flex flex-row">
 
               <NavLink end to="/search" className="d-none d-lg-inline"><IconButton icon="fa-search"/></NavLink>
               <NavLink end to="/compare" className="d-none d-lg-inline"><IconButton icon="fa-code-compare"/></NavLink>

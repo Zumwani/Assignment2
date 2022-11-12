@@ -3,18 +3,18 @@ import ActionButton from '../components/ActionButton';
 
 const PamelaRaif_LetsBeConsiousSection = () => {
   return (
-    <section className="main-layout height-403 container row width-100p gap-5">
+    <section className="main-layout container row gap-5">
         
-        <div className="col position-relative bg-model model5 d-flex">
-            <div className="margin-49 margin-bottom-100 align-bottom align-right">
+        <div className="col-xxl bg-model model5 d-flex w-100 h-403 d-flex">
+            <div className="mx-5 my-auto text-end w-100">
                 <h2 className="text-white margin-bottom-34">Pamela Raif's<br/>Top Picks</h2>
                 <ActionButton text="Shop Now" color="black"/>
             </div>
         </div>
 
-        <div className="col position-relative bg-model model6">
-            <div className="margin-49 margin-bottom-100 align-bottom">
-                <h2 className="margin-bottom-34">Let's Be<br/>Conscious</h2>
+        <div className="col-xxl bg-model model6 w-100 h-403 d-flex">
+            <div className="mx-5 my-auto text-start w-100">
+                <h2 className="margin-bottom-34 text-s-white">Let's Be<br/>Conscious</h2>
                 <ActionButton text="Flash Sale" color="white"/>
             </div>
         </div>

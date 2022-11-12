@@ -3,7 +3,7 @@ import ActionButton from './ActionButton'
 
 const SaleButton = ({ title, image }) => {
   return (
-    <div className={"sale-button bg-model " + image}>
+    <div className={"sale-button s-align-center w-md-auto bg-model " + image}>
         <div>
             <h2 className="color-white">{title}</h2>
             <ActionButton text="Flash Sale" color="white"/>

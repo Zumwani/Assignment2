@@ -28,25 +28,25 @@ const ProductView = () => {
 
             <Breadcrumb currentPage={<NavLink to="/products/">Products</NavLink>} page2={product.name}/>
 
-            <section className='main-layout2 d-flex flex-rows'>
+            <section className='main-layout2 d-flex flex-column flex-lg-row'>
 
-                <div className='w-100 h-100 me-5'>
-                    <img src={product.imageName} className="w-100 h-100"/>
-                    <div className='d-flex flex-rows w-100 h-100 mt-4 justify-content-between'>
-                        <img src={product.imageName} className="w-160" />
-                        <img src={product.imageName} className="w-160"/>
-                        <img src={product.imageName} className="w-160"/>
+                <div className='h-100 w-540 w-md-auto align-self-center mx-4 mx-lg-0'>
+                    <img src={product.imageName} className="w-100"/>
+                    <div className='container row flex-nowrap justify-content-evenly mt-4'>
+                        <img src={product.imageName} className="w-100 h-100 w-min-0 flex-shrink-1"/>
+                        <img src={product.imageName} className="w-100 h-100 w-min-0 flex-shrink-1"/>
+                        <img src={product.imageName} className="w-100 h-100 w-min-0 flex-shrink-1"/>
                     </div>
                 </div>
 
-                <div className='w-100 text-start'>
+                <div className='w-100 text-start mx-5 mt-lg-0 mt-5 w-md-auto'>
 
-                    <h5 className='mb-0'>{product.name}</h5>
+                    <h5 className='mb-0 text-start'>{product.name}</h5>
                     <p className='color-gray'>{ "SKU: " + product.articleNumber}</p>
                     <p className='color-gray'>BRAND: The Northland</p>
                     <Rating count={product.rating}/>
                     <h6 className='m-2 ms-0'>{formatCurrency(product.price)}</h6>
-                    <p className='color-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <p className='color-gray me-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                     
                     <div className='container ms-0 mt-4'>
                         <div className='row'>
@@ -59,7 +59,7 @@ const ProductView = () => {
                             </div>
 
                             <div className='col p-0 d-flex flex-column'>
-                                <fieldset className='row h-40 align-content-center my-3 justify-content-between me-5'>
+                                <fieldset className='row h-40 align-content-center my-3 justify-content-between me-5 flex-nowrap'>
                                     <Toggle id="size-s" name="size" text="S"/>
                                     <Toggle id="size-m" name="size" text="M"/>
                                     <Toggle id="size-l" name="size" text="L"/>
@@ -119,9 +119,9 @@ const ProductView = () => {
 
             </section>
             
-            <section className='main-layout2'>
-                <h5 className='text-start'>Related Products</h5>
-                <ProductGrid products={relatedProducts}/>
+            <section className='main-layout2 d-flex flex-column align-self-center'>
+                <h5 className='text-center text-lg-start'>Related Products</h5>
+                <ProductGrid products={relatedProducts} className="align-self-center"/>
             </section>
             
           </>

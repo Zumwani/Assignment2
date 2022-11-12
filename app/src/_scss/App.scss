@@ -22,15 +22,10 @@
 @use "components/_categoryButton";
 
 //Sections
-// @use "sections/_ProductSection";
 @use "sections/_BreadcrumbSection";
 @use "sections/_ContactSection";
 @use "sections/_MapSection";
 @use "sections/_Sale50Section";
-// @use "sections/_Section2";
-// @use "sections/_Section3";
 
 //Views
-@use "views/_MainView";
-@use "views/_ContactView";
-@use "views/_ShoppingCart";
+@use "views/_ShoppingCartAndWishlist";

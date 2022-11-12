@@ -11,14 +11,15 @@ nav {
     z-index: 10;
     transition: all 0.2s ease-out;
 
-    .main-layout {
-        width: 100%;
+    > div {
         display: flex;
         height: var(--nav-height);
         columns: 3;
         justify-content: space-between;
         align-items: center;
         text-align: center;
+        max-width: var(--max-content-width);
+        margin: auto;
     }
 
     :last-of-type(div) {
@@ -42,9 +43,9 @@ nav {
         font-weight: bold;
     }
 
-    .sidebar {
+    .button-icon {
         position: relative;
-        top: -18px;
+        top: -8px;
 
         &::after {
             top: -6px;
