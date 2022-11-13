@@ -14,11 +14,8 @@ import { WishlistProvider } from './Utility/WishlistUtility';
 import { NavigationManager } from './Utility/NavigationUtility';
 import './_scss/App.css';
 
-//TODO: Clean up css
-
-const App = () => {
-
-return (
+const App = () =>
+(
   <BrowserRouter>
     <ProductProvider>
       <ShoppingCartProvider>
@@ -42,6 +39,5 @@ return (
     </ProductProvider>
   </BrowserRouter>
 );
-}
 
 export default App;

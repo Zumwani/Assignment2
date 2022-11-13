@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 
 export const NavigationManager = ({ children }) => {
 
+    //Manages title and scrolls to top on page change
+
     const location = useLocation();
 
     const capitalize = (text) =>

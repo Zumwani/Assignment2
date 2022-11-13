@@ -42,11 +42,11 @@ const ProductView = () => {
                 <div className='w-100 text-start mx-5 mt-lg-0 mt-5 w-md-auto'>
 
                     <h5 className='mb-0 text-start'>{product.name}</h5>
-                    <p className='color-gray'>{ "SKU: " + product.articleNumber}</p>
-                    <p className='color-gray'>BRAND: The Northland</p>
+                    <p className='c-gray'>{ "SKU: " + product.articleNumber}</p>
+                    <p className='c-gray'>BRAND: The Northland</p>
                     <Rating count={product.rating}/>
                     <h6 className='m-2 ms-0'>{formatCurrency(product.price)}</h6>
-                    <p className='color-gray me-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <p className='c-gray me-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                     
                     <div className='container ms-0 mt-4'>
                         <div className='row'>

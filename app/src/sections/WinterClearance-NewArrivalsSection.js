@@ -3,7 +3,7 @@ import ActionButton from '../components/ActionButton';
 
 const WinterClearanceSection = () => {
   return (
-    <section className="main-layout container row width-100p text-start">
+    <section className="main-layout container row w-100 text-start">
 
         <div className="col-xxl-7 bg-model model3 d-flex h-560">
             <div className="mx-5 my-auto text-start w-100 max-width-425 s-align-center text-s-white">

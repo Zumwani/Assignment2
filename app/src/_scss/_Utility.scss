@@ -1,62 +1,32 @@
 //#region Color / Background
 
-.text-s-white {
-    @media only screen and (max-width: 900px) {
-        color: white;
-    }
-}
-
-.color-white {
+.c-white {
     color: white;
 }
 
-.color-gray {
+.c-gray {
     color: #616365;
-}
-
-.bg-brown {
-    background-color: #75695C;
 }
 
 .bg-light-gray {
     background-color: var(--color-light-gray);
 }
 
-.bg-gray {
-    background-color: var(--color-gray);
-}
-
-.bg-dark-gray {
-    background-color: var(--color-dark-gray);
-}
-
-.bg-gray {
-    background-color: var(--color-gray);
-}
-
-.background-white {
-    background-color: var(--color-white);
-}
-
-.background-dark {
-    background-color: var(--color-dark);
-}
-
-.background-customer-support {
+.bg-customer-support {
     background-image: url("../img/customer-support.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 22px;
 }
 
-.background-credit-card {
+.bg-credit-card {
     background-image: url("../img/credit-card.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 22px;
 }
 
-.background-delivery-truck {
+.bg-delivery-truck {
     background-image: url("../img/delivery-truck.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -118,26 +88,10 @@
 //#endregion
 //#region height / width
 
-.height-60 { height: 60px !important; }
-.height-232 { height: 232px; }
-.height-400 { height: 400px; }
 .h-403 { height: 403px; }
-.height-560 { height: 560px; }
-.height-670 { height: 670px; }
 
-.height-100p { height: 100%; }
-
-.width-60 { width: 60px !important; }
-.width-635 { width: 635px; }
-.width-490 { width: 490px; }
-.width-255 { width: 255px; }
 .w-540 { width: 540px; }
-.w-160 { width: 160px;}
 
-.width-50p { width: 50%; }
-.width-100p { width: 100%; }
-
-.max-width-342 { max-width: 342px; }
 .max-width-425 { max-width: 425px; }
 
 .w-fit-content {
@@ -151,36 +105,14 @@
 .w-min-0 { min-width: 0 !important; }
 
 //#endregion
-//#region Padding / Margin
+//#region Alignment
 
-.mb-80 {
-    margin-bottom: 80px;
-}
+.p-50 { padding: 50px; }
+.p-64 { padding: 64px; }
 
-.padding-0 { padding: 0px !important; }
-.padding-8 { padding: -8px !important; }
-.padding-50 { padding: 50px; }
-.padding-64 { padding: 64px; }
+.mb-26 { margin-bottom: 26px; }
+.mb-34 { margin-bottom: 34px; }
 
-.margin-0 { margin: 0px; }
-.margin-30 { margin: 30px; }
-
-.margin-vertical-30 { margin-top: 30px; margin-bottom: 30px; }
-
-.margin-top-50p { margin-top: 50%; }
-.margin-top-90 { margin-top: 90px; }
-
-.margin-bottom-26 { margin-bottom: 26px; }
-.margin-bottom-30 { margin-bottom: 30px; }
-.margin-bottom-34 { margin-bottom: 34px; }
-.margin-bottom-100 { margin-bottom: 100px; }
-
-.margin-left-0 { margin-left: 0px; }
-.margin-left-32 { margin-left: 32px; }
-
-//#endregion
-
-.gap-10 { gap: 10px; }
 .g-30 { gap: 30px; }
 
 .g-30-offset {
@@ -188,19 +120,8 @@
     margin-right: 30px;
 }
 
-.error {
-    color: red;
-}
-
-.s-align-center {
-    @media only screen and(max-width: 900px) {
-        text-align: center !important;
-        max-width: auto !important;
-    }
-}
-
-//#region xxxl (min-width: 1722px)
-//The size at where the two weird alignment sections in main view start becoming a problem
+//#endregion
+//#region Responsive
 
 @media only screen and (min-width: 1722px) {
 
@@ -210,4 +131,26 @@
     .d-xxxl-none {display: none !important;}    
 }
 
+.s-align-center {
+    @media only screen and(max-width: 900px) {
+        text-align: center !important;
+        max-width: auto !important;
+    }
+}
+
+.text-s-white {
+    @media only screen and (max-width: 900px) {
+        color: white;
+    }
+}
+
 //#endregion
+
+.error {
+    color: red;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overflow-x: auto;
+}

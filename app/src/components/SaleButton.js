@@ -5,7 +5,7 @@ const SaleButton = ({ title, image }) => {
   return (
     <div className={"sale-button s-align-center w-md-auto bg-model " + image}>
         <div>
-            <h2 className="color-white">{title}</h2>
+            <h2 className="c-white">{title}</h2>
             <ActionButton text="Flash Sale" color="white"/>
         </div>
     </div>
