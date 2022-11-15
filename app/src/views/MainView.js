@@ -9,11 +9,8 @@ import LatestAndBestSellingAndTopReactedProducts from '../sections/Latest-BestSe
 import ServiceInfo from '../sections/ServiceInfoSection'
 import WeirdAlignSections from '../sections/WeirdAlignSections'
 
-const MainView = () => {
-
-  document.title = "Fixxo";
-
-  return (
+const MainView = () =>
+(
   <>
     <Sale50/>
     <WinterClearanceAndNewArrivals/>
@@ -26,7 +23,5 @@ const MainView = () => {
     <ServiceInfo/>
   </>
 )
-
-}
 
 export default MainView
