@@ -18,9 +18,6 @@ const ProductsView = () => {
 
 }
 
-const capitalize = (text) =>
-    text.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
-
 const getProducts = (id, products) =>
     products.all.find(p => p != null && p.category.toLowerCase() == id)
     ? products.all.filter(p => p.category.toLowerCase() === id)
