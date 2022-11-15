@@ -1066,6 +1066,7 @@ button.action.white::after {
 }
 .contact-form .error {
   border: 1px solid red;
+  color: black;
 }
 
 @media (min-width: 768px) {
