@@ -94,7 +94,7 @@ const ProductView = () => {
 
             </section>
 
-            <section className='main-layout2'>
+            <section className='main-layout2 w-100'>
 
                 <TabControl>
                     <Tab id="tab-description" header="Description">
