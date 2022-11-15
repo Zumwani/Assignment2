@@ -5,8 +5,6 @@ import MapSection from '../sections/MapSectionSection'
 
 const ContactView = () => {
 
-  document.title = "Contact - Fixxo";
-
   return (
     <>
       <BreadcrumbSection currentPage="Contact"/>

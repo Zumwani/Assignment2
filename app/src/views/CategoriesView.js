@@ -6,12 +6,12 @@ import CategoryButton from '../components/CategoryButton';
 import ProductGrid from '../components/ProductGrid';
 
 const CategoriesView = () => {
-  
+
   const { products } = useProducts();
   let categories = [...new Set(products.all.map(p => p.category))];
 
   const getImage = (category) =>
-    products.all.find(p => p.category == category).imageName;
+    products.all.find(p => p.category === category).imageName;
 
   const createCategoryButton = (category) =>
     <NavLink key={category} to={ "/products/" + category.replaceAll(" ", "-").toLowerCase() }><CategoryButton categoryName={category} image={getImage(category)}/></NavLink>;

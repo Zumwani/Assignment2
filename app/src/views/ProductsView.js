@@ -11,7 +11,7 @@ const ProductsView = () => {
     
     return (
         <>
-            <BreadcrumbSection currentPage={<NavLink to="/products/">Products</NavLink>} page2={id == null ? null : id}/>
+            <BreadcrumbSection currentPage={<NavLink to="/products/">Products</NavLink>} page2={id === null ? null : id}/>
             <ProductGrid products={getProducts(id, products)} innerClassName="justify-content-center" className="main-layout2"/>
         </>
     )
@@ -19,7 +19,7 @@ const ProductsView = () => {
 }
 
 const getProducts = (id, products) =>
-    products.all.find(p => p != null && p.category.toLowerCase() == id)
+    products.all.find(p => p !== null && p.category.toLowerCase() === id)
     ? products.all.filter(p => p.category.toLowerCase() === id)
     : products.all;
 

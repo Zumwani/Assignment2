@@ -31,11 +31,11 @@ const ProductView = () => {
             <section className='main-layout2 d-flex flex-column flex-lg-row'>
 
                 <div className='h-100 w-540 w-md-auto align-self-center mx-4 mx-lg-0'>
-                    <img src={product.imageName} className="w-100"/>
+                    <img src={product.imageName} alt="" className="w-100"/>
                     <div className='container row flex-nowrap justify-content-evenly mt-4'>
-                        <img src={product.imageName} className="w-100 h-100 w-min-0 flex-shrink-1"/>
-                        <img src={product.imageName} className="w-100 h-100 w-min-0 flex-shrink-1"/>
-                        <img src={product.imageName} className="w-100 h-100 w-min-0 flex-shrink-1"/>
+                        <img src={product.imageName} alt="" className="w-100 h-100 w-min-0 flex-shrink-1"/>
+                        <img src={product.imageName} alt="" className="w-100 h-100 w-min-0 flex-shrink-1"/>
+                        <img src={product.imageName} alt="" className="w-100 h-100 w-min-0 flex-shrink-1"/>
                     </div>
                 </div>
 
