@@ -23,7 +23,7 @@ const App = () =>
             <NavBar/>
             <NavigationManager>
             <Routes>
-                <Route path="/" element={<MainView/>} title="sak"/>
+                <Route path="/" element={<MainView/>}/>
                 <Route path='/product/:name' element={<ProductView/>}/>
                 <Route path='/products' element={<ProductsView/>}/>
                 <Route path='/products/:id' element={<ProductsView/>}/>
