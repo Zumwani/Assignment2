@@ -1,8 +1,5 @@
 const patterns = { name: 2, email: /.{1,}@.*\..{1,}/, comments: 5 }
 
-export const validate = (form, errors, name, setErrors, setCanSubmit) =>
-_validate(form, errors, name, setErrors, setCanSubmit, true);
-
 export const validateAll = (form, errors, setErrors, setCanSubmit) => {
 
     Object.keys(form).forEach(key => validate(form, errors, key));
@@ -18,7 +15,10 @@ export const validateAll = (form, errors, setErrors, setCanSubmit) => {
 
 }
 
-function _validate(form, errors, name = undefined, setErrors = undefined, setCanSubmit = undefined) {
+export const validate = (form, errors, name, setErrors, setCanSubmit) =>
+    _validate(form, errors, name, setErrors, setCanSubmit);
+
+function _validate(form, errors, name, setErrors = undefined, setCanSubmit = undefined) {
 
     const pattern = patterns[name];
     
