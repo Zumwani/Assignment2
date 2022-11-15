@@ -7,8 +7,6 @@ import ProductGrid from '../components/ProductGrid';
 
 const CategoriesView = () => {
   
-  document.title = "Categories - Fixxo";
-
   const { products } = useProducts();
   let categories = [...new Set(products.all.map(p => p.category))];
 
